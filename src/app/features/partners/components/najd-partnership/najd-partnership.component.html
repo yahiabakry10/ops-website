@@ -1,0 +1,146 @@
+<section
+  class="relative pt-24 md:pt-28 overflow-hidden bg-linear-to-r from-[#2E5AAC] to-[#4A90E2] dark:from-[#1e3a7a] dark:to-[#111827] transition-colors duration-500"
+>
+  <div class="absolute inset-0">
+    <div
+      class="absolute inset-0 opacity-10 dark:opacity-20 animate-pulse-slow"
+      style="
+        background-image:
+          radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.2) 0%, transparent 50%),
+          radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+      "
+    ></div>
+  </div>
+
+  <div class="absolute inset-0 overflow-hidden">
+    @for (ray of lightRays; track ray) {
+      <div
+        class="absolute top-0 bottom-0 w-1 bg-gradient-to-b from-transparent via-white/10 to-transparent animate-ray"
+        [style.left.%]="20 + ray * 15"
+        [style.transform]="'skewX(-15deg)'"
+        [style.animation-delay]="ray * 0.3 + 's'"
+      ></div>
+    }
+  </div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <div class="relative animate-fade-in-up">
+      <div class="max-w-7xl mx-auto">
+        <div
+          class="flex flex-wrap items-center justify-center gap-6 md:gap-8 mb-10 animate-fade-in-up"
+          style="animation-delay: 0.4s"
+        >
+          <div class="flex items-center gap-3 md:gap-4">
+            <div
+              class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-xl flex items-center justify-center text-2xl md:text-3xl"
+            >
+              🇪🇬
+            </div>
+            <div class="text-right">
+              <p class="text-white font-bold text-lg md:text-xl">
+                {{ 'najdPartnership.countries.egypt' | translate }}
+              </p>
+              <p class="text-blue-100/80 font-medium text-xs md:text-sm">
+                {{ 'najdPartnership.companies.ops' | translate }}
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/20 backdrop-blur-lg flex items-center justify-center shadow-2xl border-2 border-white/30 animate-scale-pulse"
+          >
+            <i class="pi pi-link text-white" style="font-size: 1.2rem"></i>
+          </div>
+
+          <div class="flex items-center gap-3 md:gap-4">
+            <div class="text-left">
+              <p class="text-white font-bold text-lg md:text-xl">
+                {{ 'najdPartnership.countries.saudiArabia' | translate }}
+              </p>
+              <p class="text-blue-100/80 font-medium text-xs md:text-sm">
+                {{ 'najdPartnership.companies.najd' | translate }}
+              </p>
+            </div>
+            <div
+              class="w-12 h-12 md:w-14 md:h-14 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-xl flex items-center justify-center text-2xl md:text-3xl"
+            >
+              🇸🇦
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mb-10 md:mb-12 animate-scale-in" style="animation-delay: 0.6s">
+          <h2 class="text-4xl md:text-7xl font-bold mb-4 tracking-tight leading-tight">
+            <span class="inline-block text-white animate-shimmer">{{
+              'najdPartnership.title' | translate
+            }}</span>
+          </h2>
+          <p class="text-blue-50 text-lg md:text-2xl font-light opacity-90 px-4">
+            {{ 'najdPartnership.subtitle' | translate }}
+          </p>
+        </div>
+
+        <div class="relative mb-12 md:mb-16 animate-fade-in-up" style="animation-delay: 0.8s">
+          <div class="relative group">
+            <img
+              src="/images/najdPartner.png"
+              alt="OPS and NAJD Partnership"
+              class="w-full h-auto object-cover block"
+            />
+
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#2E5AAC]/40 dark:from-[#111827]/60 via-transparent to-transparent"
+            ></div>
+
+            <div
+              class="hidden sm:block absolute top-4 left-4 w-12 h-12 md:w-20 md:h-20 border-t-4 border-l-4 border-white/20 rounded-tl-2xl animate-fade-pulse"
+            ></div>
+            <div
+              class="hidden sm:block absolute bottom-4 right-4 w-12 h-12 md:w-20 md:h-20 border-b-4 border-r-4 border-white/20 rounded-br-2xl animate-fade-pulse"
+              style="animation-delay: 1.5s"
+            ></div>
+
+            <div
+              class="absolute -bottom-6 left-1/2 -translate-x-1/2 w-[90%] md:w-full max-w-md z-20"
+            >
+              <div
+                class="bg-white/15 backdrop-blur-xl border border-white/30 rounded-2xl md:rounded-full py-3 md:py-4 px-6 md:px-8 flex items-center justify-center gap-3 md:gap-4 shadow-2xl"
+              >
+                <i class="pi pi-verified text-white animate-pulse-slow"></i>
+                <p class="text-white font-semibold text-sm md:text-lg text-center leading-tight">
+                  {{ 'najdPartnership.badge' | translate }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-16 md:mt-20 animate-fade-in-up"
+          style="animation-delay: 1s"
+        >
+          @for (item of highlights; track item.titleKey; let i = $index) {
+            <div
+              class="bg-white/5 backdrop-blur-sm p-6 md:p-8 border border-white/10 hover:bg-white/10 transition-all duration-300 animate-fade-in-up"
+              [style.animation-delay]="1.2 + i * 0.1 + 's'"
+            >
+              <div
+                [class]="
+                  'w-12 h-12 md:w-14 md:h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 md:mb-6 shadow-lg text-white'
+                "
+              >
+                <i [class]="'pi text-xl md:text-2xl pi-' + item.icon"></i>
+              </div>
+              <h4 class="text-white font-bold text-xl md:text-2xl mb-2 md:mb-3">
+                {{ item.titleKey | translate }}
+              </h4>
+              <p class="text-blue-50/70 text-sm md:text-base leading-relaxed">
+                {{ item.descKey | translate }}
+              </p>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

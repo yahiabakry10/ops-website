@@ -47,22 +47,10 @@
     }
   },
 
-  "PARTNERS": {
+  "CLIENTS": {
     "TITLE": "Trusted by Leading Healthcare Institutions",
     "SUBTITLE": "Serving hospitals, medical centers, and healthcare facilities across the region",
-    "VIEW_ALL": "View All Customers",
-    "LIST": {
-      "CITY_GEN": "City General Hospital",
-      "ELITE_MED": "Elite Medical Center",
-      "SPEC_CARE": "Specialized Care Clinic",
-      "REG_HEALTH": "Regional Health Institute",
-      "UNITY_CHILD": "Unity Children's Hospital",
-      "WELL_DIAG": "Wellness Diagnostics",
-      "METRO_PHARMA": "Metropolitan Pharma",
-      "ADV_SURG": "Advanced Surgery Suite",
-      "PRI_HEALTH": "Primary Health Network",
-      "GLOBAL_LIFE": "Global Life Sciences"
-    }
+    "VIEW_ALL": "View All Customers"
   },
 
   "CTA": {
@@ -525,16 +513,40 @@
           "title": "Solution Architecture",
           "description": "Enterprise-grade solution design and architecture"
         }
-      },
-      "connect": {
-        "heading": "Connect with Nebras",
-        "facebook": "Facebook"
       }
     },
     "cta": {
       "heading": "Interested in Partnership?",
       "description": "Join our network of partners and help us deliver innovative healthcare solutions",
       "button": "Contact Us"
+    }
+  },
+
+  "najdPartnership": {
+    "countries": {
+      "egypt": "Egypt",
+      "saudiArabia": "Saudi Arabia"
+    },
+    "companies": {
+      "ops": "OPS",
+      "najd": "NAJD"
+    },
+    "title": "OPS × NAJD",
+    "subtitle": "Building Healthcare Excellence Together",
+    "badge": "Official Partnership Agreement Signed",
+    "highlights": {
+      "regionalCoverage": {
+        "title": "Regional Coverage",
+        "description": "Saudi Arabia & Arab Gulf Countries"
+      },
+      "healthcareFocus": {
+        "title": "Healthcare Focus",
+        "description": "PremiumCare HMIS Distribution"
+      },
+      "marketLeadership": {
+        "title": "Market Leadership",
+        "description": "Premier Sales & Marketing Agent"
+      }
     }
   }
 }

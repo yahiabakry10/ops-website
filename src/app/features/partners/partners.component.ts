@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { MainHeaderComponent } from '../../shared/components/main-header/main-header.component';
-import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
-import { SecondaryCardInfoComponent } from '../../shared/components/secondary-card-info/secondary-card-info.component';
 import { TranslatePipe } from '@ngx-translate/core';
+import { SecondaryCardInfoComponent } from '../../shared/components/secondary-card-info/secondary-card-info.component';
+import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
+import { NajdPartnershipComponent } from './components/najd-partnership/najd-partnership.component';
 
 interface Feature {
   icon: string;
@@ -14,11 +14,11 @@ interface Feature {
 @Component({
   selector: 'app-partners',
   imports: [
-    MainHeaderComponent,
     RouterLink,
     ScrollRevealDirective,
     SecondaryCardInfoComponent,
     TranslatePipe,
+    NajdPartnershipComponent,
   ],
   templateUrl: './partners.component.html',
   styleUrls: ['./partners.component.css'],
