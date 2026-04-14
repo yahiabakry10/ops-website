@@ -173,9 +173,9 @@
         "D": "LDM is a fully automated Web-Based laboratory information management system that covers all functional areas of modern multi-specialty laboratory.",
         "F1": "Complete workflow automation from patient registration to final result reporting",
         "F2": "Developed on Oracle 12c and Microsoft user interface technology",
-        "F3": "Compliant with NCCLS, CLSI, JCI and CAP standards",
-        "F4": "ISO 9001:2008 certified and FDA approved",
-        "F5": "Bar-coding identification for all samples"
+        "F3": "Bar-coding identification for all samples",
+        "F4": "Real-time graphical tracking for historical lab values and trends",
+        "F5": "Automated alerts for critical out-of-range values and clinical safety"
       },
       "RIS": {
         "H": "Radiology Information System (RIS) & PACS",
