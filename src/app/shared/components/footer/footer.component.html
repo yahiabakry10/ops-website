@@ -1,0 +1,108 @@
+<footer
+  class="bg-linear-to-r from-[#2E5AAC] to-[#4A90E2] dark:from-[#1e3a7a] dark:to-[#111827] text-white py-12 transition-colors duration-300"
+  aria-label="Site Footer"
+>
+  <div class="section-content-wrapper">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4 dark:text-blue-400">
+          {{ 'COMPANY.TAGLINE' | translate }}
+        </h3>
+        <p class="text-sm opacity-90 dark:text-gray-300 mb-4">
+          {{ 'COMPANY.DESCRIPTION' | translate }}
+        </p>
+        <p class="text-xs opacity-75 dark:text-gray-400">
+          {{ 'FOOTER.COPYRIGHT' | translate: { year: currentYear } }}
+        </p>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4 dark:text-blue-400">
+          {{ 'FOOTER.QUICK_LINKS' | translate }}
+        </h4>
+        <ul class="space-y-2" role="list">
+          @for (link of quickLinks; track link.path) {
+            <li>
+              <a
+                [routerLink]="link.path"
+                class="text-sm opacity-90 hover:opacity-100 no-underline text-white dark:text-gray-300 dark:hover:text-blue-400 transition-all"
+              >
+                {{ `NAV.ITEMS.${link.key}` | translate }}
+              </a>
+            </li>
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4 dark:text-blue-400">
+          {{ 'FOOTER.OUR_PRODUCTS' | translate }}
+        </h4>
+        <ul class="space-y-2 text-sm opacity-90 dark:text-gray-300" role="list">
+          @for (product of products; track product) {
+            <li>{{ product }}</li>
+          }
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="font-semibold mb-4 dark:text-blue-400">
+          {{ 'FOOTER.CONTACT_US' | translate }}
+        </h4>
+        <div class="space-y-2 text-sm opacity-90 dark:text-gray-300">
+          <p class="flex items-start">
+            <i class="pi pi-map-marker mt-1 me-2 dark:text-blue-400" aria-hidden="true"></i>
+            <span>{{ 'FOOTER.ADDRESS' | translate }}</span>
+          </p>
+          <p class="flex items-center">
+            <i class="pi pi-phone me-2 dark:text-blue-400" aria-hidden="true"></i>
+            <span dir="ltr">+202 27313051</span>
+          </p>
+          <p class="flex items-center">
+            <i class="pi pi-mobile me-2 dark:text-blue-400" aria-hidden="true"></i>
+            <span dir="ltr">002 01151175657</span>
+          </p>
+          <p class="flex items-center">
+            <i class="pi pi-envelope me-2 dark:text-blue-400" aria-hidden="true"></i>
+            h.leithy@ops-premium.com
+          </p>
+
+          <div class="flex gap-4 mt-6">
+            <a
+              href="https://www.facebook.com/OPSPremium"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white dark:text-gray-300 dark:hover:text-blue-400 hover:scale-110 transition-all"
+              aria-label="Follow OPS on Facebook"
+              ><i class="pi pi-facebook text-xl"></i
+            ></a>
+            <a
+              href="https://x.com/OPSPremium"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white dark:text-gray-300 dark:hover:text-blue-400 hover:scale-110 transition-all"
+              aria-label="Follow OPS on X (Twitter)"
+              ><i class="pi pi-twitter text-xl"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/company/ops-premium"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white dark:text-gray-300 dark:hover:text-blue-400 hover:scale-110 transition-all"
+              aria-label="Follow OPS on LinkedIn"
+              ><i class="pi pi-linkedin text-xl"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/opspremium"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="text-white dark:text-gray-300 dark:hover:text-blue-400 hover:scale-110 transition-all"
+              aria-label="Follow OPS on Instagram"
+              ><i class="pi pi-instagram text-xl"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

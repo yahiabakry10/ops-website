@@ -1,0 +1,36 @@
+<button
+  type="button"
+  [class]="
+    'group relative flex items-center justify-center size-10 rounded-lg transition-all duration-300 cursor-pointer overflow-hidden ' +
+    'hover:scale-105 active:scale-95 ' +
+    'bg-gray-100/80 hover:bg-gray-200/90 dark:bg-slate-800/80 dark:hover:bg-slate-700/90 ' +
+    'border border-gray-200/50 dark:border-slate-700/50 ' +
+    'shadow-sm hover:shadow-md'
+  "
+  (click)="toggleLanguage()"
+  [attr.aria-label]="
+    `Switch language to ${selectedLanguage().code === 'en' ? 'Arabic' : 'English'}`
+  "
+>
+  <!-- Subtle glow effect on hover -->
+  <div
+    class="absolute inset-0 bg-linear-to-br from-blue-400/0 to-purple-400/0 group-hover:from-blue-400/10 group-hover:to-purple-400/10 dark:group-hover:from-blue-300/5 dark:group-hover:to-purple-300/5 transition-all duration-300 rounded-lg"
+  ></div>
+
+  <svg
+    class="relative z-10 text-slate-700 group-hover:text-[#2E5AAC] dark:text-slate-300 dark:group-hover:text-brand-secondary transition-colors duration-300"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <circle cx="12" cy="12" r="10" />
+    <path
+      d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+    />
+  </svg>
+</button>

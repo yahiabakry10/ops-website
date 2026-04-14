@@ -1,0 +1,48 @@
+<section class="py-20">
+  <div class="section-content-wrapper">
+    <div class="text-center mb-16" appScrollReveal>
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        {{ 'PARTNERS.TITLE' | translate }}
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        {{ 'PARTNERS.SUBTITLE' | translate }}
+      </p>
+    </div>
+
+    <div class="px-4 md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        @for (customer of customers(); track $index) {
+          <div
+            appScrollReveal
+            [style.transition-delay]="$index * 50 + 'ms'"
+            class="group relative flex items-center justify-center h-48 p-6 rounded-2xl transition-all duration-500 bg-white/70 border border-white/80 shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:bg-white dark:bg-slate-900/50 dark:border-slate-800/50 dark:shadow-2xl dark:hover:bg-slate-900 dark:hover:border-blue-500/30 backface-hidden overflow-hidden"
+          >
+            <div
+              class="absolute inset-0 bg-radial-gradient from-blue-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            ></div>
+
+            <img
+              [src]="customer.src"
+              [alt]="customer.alt"
+              class="w-full h-full object-contain transition-all duration-700"
+              loading="lazy"
+            />
+          </div>
+        }
+      </div>
+    </div>
+
+    <div class="text-center mt-12" appScrollReveal [hiddenClasses]="['opacity-0', 'translate-y-4']">
+      <a
+        fragment="customers"
+        routerLink="/about"
+        class="inline-flex items-center px-6 py-3 border border-[#2E5AAC] text-[#2E5AAC] dark:border-[#4A90E2] dark:text-[#4A90E2] hover:bg-[#2E5AAC] dark:hover:bg-[#4A90E2] hover:text-white dark:hover:text-white transition-colors duration-300 rounded-md font-semibold group"
+      >
+        {{ 'PARTNERS.VIEW_ALL' | translate }}
+        <i
+          class="pi pi-arrow-right ms-2 group-hover:translate-x-1 transition-transform rtl:rotate-180 rtl:group-hover:-translate-x-1"
+        ></i>
+      </a>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,540 @@
+{
+  "COMPANY": {
+    "BADGE": "20+ Years of Excellence in Healthcare IT",
+    "TAGLINE": "Optimum For Premium Solutions OPS",
+    "SUBTITLE": "Pioneer Software Company in Healthcare & ERP Solutions",
+    "DESCRIPTION": "Over 20 years of experience in software development and IT Solutions. Specializing in Hospital Management Information Systems and Enterprise Resource Planning.",
+    "EXPLORE_PRODUCTS": "Explore Products",
+    "CONTACT_US": "Contact Us",
+    "STAT_INSTITUTIONS_VALUE": "25+",
+    "STAT_INSTITUTIONS_LABEL": "Healthcare Institutions",
+    "STAT_EXPERIENCE_VALUE": "20+",
+    "STAT_EXPERIENCE_LABEL": "Years Experience",
+    "STAT_SATISFACTION_VALUE": "100%",
+    "STAT_SATISFACTION_LABEL": "Client Satisfaction",
+    "SCROLL_TO_EXPLORE": "Scroll to explore",
+    "GET_STARTED_NOW": "Get Started Now"
+  },
+
+  "SERVICES": {
+    "HEADER": "Our Services",
+    "SUBHEADER": "Comprehensive IT solutions tailored to meet your healthcare and business needs",
+    "ITEMS": {
+      "CONSULTATIONS": {
+        "TITLE": "Technical Consultations",
+        "DESC": "Provide technical consultations in all IT fields"
+      },
+      "BUSINESS": {
+        "TITLE": "IT Business Solutions",
+        "DESC": "Comprehensive IT solutions for your business needs"
+      },
+      "WEB": {
+        "TITLE": "Web Development",
+        "DESC": "Modern and responsive web applications"
+      },
+      "APP_DEV": {
+        "TITLE": "Application Development",
+        "DESC": "Custom application development and outsourcing"
+      },
+      "MOBILE": {
+        "TITLE": "Mobile Applications",
+        "DESC": "Native and cross-platform mobile app development"
+      },
+      "HEALTHCARE": {
+        "TITLE": "Healthcare & ERP",
+        "DESC": "Specialized in Healthcare Management and ERP Solutions"
+      }
+    }
+  },
+
+  "PARTNERS": {
+    "TITLE": "Trusted by Leading Healthcare Institutions",
+    "SUBTITLE": "Serving hospitals, medical centers, and healthcare facilities across the region",
+    "VIEW_ALL": "View All Customers",
+    "LIST": {
+      "CITY_GEN": "City General Hospital",
+      "ELITE_MED": "Elite Medical Center",
+      "SPEC_CARE": "Specialized Care Clinic",
+      "REG_HEALTH": "Regional Health Institute",
+      "UNITY_CHILD": "Unity Children's Hospital",
+      "WELL_DIAG": "Wellness Diagnostics",
+      "METRO_PHARMA": "Metropolitan Pharma",
+      "ADV_SURG": "Advanced Surgery Suite",
+      "PRI_HEALTH": "Primary Health Network",
+      "GLOBAL_LIFE": "Global Life Sciences"
+    }
+  },
+
+  "CTA": {
+    "TITLE": "Ready to Transform Your Healthcare Operations?",
+    "SUBTITLE": "Discover how our innovative solutions can streamline your workflows and improve patient care",
+    "EXPLORE_PRODUCTS": "Explore Our Products",
+    "SCHEDULE_DEMO": "Schedule a Demo"
+  },
+
+  "NAV": {
+    "TAGLINE": "Optimum For Premium Solutions",
+    "SUBTAGLINE": "OPS",
+    "ITEMS": {
+      "HOME": "Home",
+      "PRODUCTS": "Products",
+      "ABOUT": "About Us",
+      "PARTNERS": "Partners",
+      "CONTACT": "Contact"
+    },
+    "ARIA": {
+      "TOGGLE_MENU": "Toggle navigation menu"
+    }
+  },
+
+  "FOOTER": {
+    "DESCRIPTION": "Optimum For Premium Solutions - Pioneer software company specializing in Healthcare & ERP Solutions since 2005.",
+    "COPYRIGHT": "© {{year}} Copyrights Reserved",
+    "QUICK_LINKS": "Quick Links",
+    "OUR_PRODUCTS": "Our Products",
+    "CONTACT_US": "Contact Us",
+    "ADDRESS": "52 Building Shamal Sinai, Zahraa Maadi, Cairo",
+    "LINKS": {
+      "HOME": "Home",
+      "PRODUCTS": "Products",
+      "ABOUT": "About Us",
+      "PARTNERS": "Partners",
+      "CONTACT": "Contact"
+    }
+  },
+
+  "PRODUCTS": {
+    "HERO": {
+      "TITLE": "Our Products",
+      "SUBTITLE": "Innovative solutions for Healthcare and Enterprise Resource Planning"
+    },
+    "HMIS": {
+      "TITLE": "PremiumCare",
+      "SUBTITLE": "Hospital Management Information System",
+      "DESCRIPTION": "PremiumCare is developed to automate manual operations in healthcare organizations. The main objective is to digitize the records of patients so that they can be easily recovered. Our system provides comprehensive management of all hospital operations from patient admission to discharge.",
+      "CHECKS": {
+        "ANGULAR": "Web-based system using Angular framework",
+        "LANG": "Multi-language support (Arabic/English)",
+        "DB": "MS SQL 2019 or Oracle 19c database",
+        "AUTH": "Multi-factor authentication and role-based access"
+      }
+    },
+    "FEATURES_SECTION": {
+      "TITLE": "Key Features",
+      "PATIENT_MGMT": {
+        "T": "Patient Management",
+        "D": "Comprehensive patient admission, registration, and EMR"
+      },
+      "CLINICAL": {
+        "T": "Clinical Operations",
+        "D": "Manage clinics, emergency, and inpatient care efficiently"
+      },
+      "LAB": { "T": "Laboratory & Radiology", "D": "Integrated LIS and RIS with PACS support" },
+      "PHARMACY": {
+        "T": "Pharmacy Management",
+        "D": "Inventory control and prescription tracking"
+      },
+      "FINANCIAL": { "T": "Financial Management", "D": "Patient billing and insurance contracts" },
+      "DECISION": { "T": "Decision Support", "D": "Management dashboards with analytics and KPIs" }
+    },
+    "TABS": {
+      "TITLE": "Complete Module Suite",
+      "FRONT": "Front Office",
+      "FINANCIAL": "Financial",
+      "BACK": "Back Office"
+    },
+    "MODULES": {
+      "FRONT": {
+        "RECEPTION": "Reception & Admission",
+        "INPATIENT": "In-Patient Management (ICU-NICU)",
+        "CLINICS": "Clinics/Out-Patient Management",
+        "RADIOLOGY": "Radiology Information System",
+        "LABORATORY": "Laboratory Information System",
+        "BLOOD_BANK": "Blood Bank",
+        "EMERGENCY": "Emergency Management",
+        "OPERATING_ROOMS": "Operating Rooms",
+        "NURSE_STATIONS": "Nurse Stations",
+        "PHARMACY": "Pharmacy Management System",
+        "DOCTORS_DASHBOARD": "Doctors Dashboard",
+        "DIALYSIS": "Dialysis System",
+        "EMR": "Electronic Medical Records",
+        "ORDERS_ENTRY": "Orders Entry",
+        "DECISION_SUPPORT": "Management Decision Support System"
+      },
+      "FINANCIAL": {
+        "PATIENT_CONTRACTS": "Patient Contracts",
+        "PATIENT_ACCOUNTS": "Patient Accounts",
+        "DOCTOR_ACCOUNTS": "Doctor Accounts",
+        "CASH_MANAGEMENT": "Cash Management",
+        "NOTES": "Notes Payable & Receivable"
+      },
+      "BACK": {
+        "INVENTORY": "Inventory Control System",
+        "PURCHASING": "Purchasing System",
+        "ACCOUNTS_PAYABLE": "Account Payable System",
+        "FIXED_ASSETS": "Fixed Assets",
+        "GENERAL_LEDGER": "General Ledger & Budgeting System",
+        "HR_PAYROLL": "HR & Payroll System",
+        "SYSTEM_SETUP": "System Setup & Security"
+      }
+    },
+    "ACCORDION": {
+      "TITLE": "Module Details",
+      "LIS": {
+        "H": "Laboratory Information System (LDM-LIS)",
+        "D": "LDM is a fully automated Web-Based laboratory information management system that covers all functional areas of modern multi-specialty laboratory.",
+        "F1": "Complete workflow automation from patient registration to final result reporting",
+        "F2": "Developed on Oracle 12c and Microsoft user interface technology",
+        "F3": "Compliant with NCCLS, CLSI, JCI and CAP standards",
+        "F4": "ISO 9001:2008 certified and FDA approved",
+        "F5": "Bar-coding identification for all samples"
+      },
+      "RIS": {
+        "H": "Radiology Information System (RIS) & PACS",
+        "D": "Comprehensive radiology and imaging department operations management system.",
+        "F1": "Patient appointment and exam scheduling management",
+        "F2": "Image capture, storage, and retrieval (X-rays, CT scans, MRIs)",
+        "F3": "DICOM Interface with full standard storage support",
+        "F4": "PaXtreme VU multi-modality viewing software",
+        "F5": "3D/MPR processing and tele-radiology support"
+      },
+      "EMR": {
+        "H": "Electronic Medical Records (EMR)",
+        "D": "Comprehensive patient medical history and clinical data management.",
+        "F1": "Complete patient history on a single screen view",
+        "F2": "ICD 10 Coding for diagnosis",
+        "F3": "Prescription management with drug interaction alerts",
+        "F4": "Vitals tracking with graphical views and alerts",
+        "F5": "Lab values plotted over time as graphs"
+      },
+      "ORDER": {
+        "H": "Order Entry Module",
+        "D": "Streamlined order management for medications, treatments, and diagnostic procedures.",
+        "F1": "Clinical decision support with alerts and warnings",
+        "F2": "Order review and approval workflow",
+        "F3": "Real-time order tracking and status updates",
+        "F4": "Integration with pharmacy, lab, and radiology systems"
+      }
+    },
+    "ERP": {
+      "TITLE": "PremiumERP",
+      "SUBTITLE": "Enterprise Resource Planning",
+      "DESC": "Comprehensive ERP solution designed to streamline all your business operations. From finance and HR to inventory and procurement, PremiumERP provides integrated modules that work seamlessly together to give you complete control over your enterprise.",
+      "MOD_FIN": "Financial Management",
+      "MOD_HR": "Human Resources",
+      "MOD_PROC": "Procurement",
+      "MOD_INV": "Inventory Control"
+    },
+    "MOBILE": {
+      "TITLE": "Mobile App for Patient Reservations",
+      "SUBTITLE": "Building authentic relations between healthcare providers and patients",
+      "F1": "Easy appointment booking from anywhere, anytime",
+      "F2": "Automated appointment reminders",
+      "F3": "View appointment history and upcoming visits",
+      "F4": "Access medical records and reports",
+      "F5": "Multiple payment options support",
+      "F6": "Doctor profiles and availability",
+      "F7": "Building authentic relations between providers and patients"
+    },
+    "PLATFORMS": {
+      "TITLE": "Development Platforms",
+      "SUBTITLE": "Built on industry-leading technologies",
+      "MS": "Microsoft",
+      "MS_SUB": "MS SQL Server, .NET, Angular",
+      "ORACLE": "Oracle",
+      "ORACLE_SUB": "Oracle 19c Database"
+    }
+  },
+
+  "ABOUT": {
+    "HERO": {
+      "TITLE": "About OPS",
+      "SUBTITLE": "Pioneer software company dedicated to healthcare and IT innovation"
+    },
+    "WHO": {
+      "TITLE": "Who We Are",
+      "P1": "OPS (Optimum For Premium Solutions) is one of the pioneers' software companies in Egypt, specializing in healthcare and enterprise solutions.",
+      "P2": "OPS is an extension of EConnect Technology Company established in 2005 to operate in the field of IT Development & Innovation.",
+      "P3": "Our team brings over 20 years of experience in software development and IT Solutions, making us a trusted partner for healthcare institutions across the region.",
+      "P4": "We are specialized in Healthcare & ERP Solutions, providing comprehensive systems that streamline operations and improve patient care."
+    },
+    "VISION": {
+      "TITLE": "Our Vision",
+      "TEXT": "\"Speed Information delivery with high reliable integrated applications\""
+    },
+    "MISSION": {
+      "TITLE": "Our Mission",
+      "I1": "Long term customer satisfaction",
+      "I2": "Management awareness",
+      "I3": "Product quality",
+      "I4": "Marketing Power"
+    },
+    "CORE_VALUES": {
+      "TITLE": "Our Core Values",
+      "TEXT": "Customer loyalty, leadership behavior, honesty, motivational environment, respect diversity and balance..."
+    },
+    "JOURNEY": {
+      "TITLE": "Our Journey"
+    },
+    "MILESTONES": {
+      "E1": "EConnect Technology Company established",
+      "E2": "Expanded to healthcare solutions",
+      "E3": "Launched PremiumCare HMIS",
+      "E4": "Serving 50+ healthcare institutions",
+      "E5": "Continued innovation and growth"
+    },
+    "VALUES": {
+      "CUSTOMER_LOYALTY": {
+        "T": "Customer Loyalty",
+        "D": "Building long-term relationships with our clients through exceptional service and support."
+      },
+      "LEADERSHIP": {
+        "T": "Leadership Behavior",
+        "D": "Leading by example and fostering excellence in everything we do."
+      },
+      "HONESTY": {
+        "T": "Honesty",
+        "D": "Maintaining transparency and integrity in all our business dealings."
+      },
+      "MOTIVATIONAL": {
+        "T": "Motivational Environment",
+        "D": "Creating an inspiring workplace that drives innovation and creativity."
+      },
+      "DIVERSITY": {
+        "T": "Respect Diversity",
+        "D": "Embracing different perspectives and cultures in our global operations."
+      },
+      "BALANCE": {
+        "T": "Balance",
+        "D": "Achieving harmony between quality, innovation, and customer satisfaction."
+      }
+    },
+    "CUSTOMERS": {
+      "TITLE": "Our Trusted Customers",
+      "SUBTITLE": "Leading healthcare institutions across the region",
+      "CAT_HOSPITALS": "Hospitals",
+      "CAT_MEDICAL": "Medical Centers & Polyclinics",
+      "H1": "Military Production Hospital (270 Beds) – Cairo",
+      "H2": "Rabia Hospital – Riyadh – Saudi Arabia",
+      "H3": "Islamic Hospital - Cairo",
+      "H4": "Fouad Hospital – Cairo",
+      "H5": "Al-Jazeera International Hospital (SALLAB) - Mansoura",
+      "H6": "Nile Hospital – Minya",
+      "H7": "AlNahar Hospital – Alex",
+      "H8": "AlRazy Hospital – Monoufia",
+      "H9": "Lymar Hospital (Pediatrics) - Demiatta",
+      "H10": "Tiba Hospital – Alex",
+      "H11": "Dr. Ibrahim Nada Hospital - Alex",
+      "H12": "Badrawy Hospital – Alex",
+      "H13": "Sidi Beshr Royal Hospital – Alex",
+      "H14": "Fargallah Charitable Hospital – Alex",
+      "H15": "Synapse Hospital (Pediatrics) – Alex",
+      "M1": "Saint Mary Medical Center - Cairo – ElKanater",
+      "M2": "Enaya Medical Centers - Giza – Sheik Zayed",
+      "M3": "Fouad Orthopedic Medical Center - 10th of Ramadan",
+      "M4": "El-Sewedy Medical Group",
+      "M5": "Nile Specialized Clinics - Tanta",
+      "M6": "AlTabib AlAraby Medical Center – Monoufia",
+      "M7": "AlYousr Obstetrics and Gynecology Medical Center - 10th of Ramadan",
+      "M8": "Eiadty Medical Center – Cairo",
+      "M9": "Al-Mahaba Medical Center (Dialysis) – Cairo",
+      "M10": "Aldawa Medical Center – Cairo",
+      "M11": "Dr. Tarek Omar Clinics – Alex"
+    },
+    "ACTIVITIES": {
+      "TITLE": "Company Activities",
+      "CONSULTATIONS": {
+        "T": "Technical Consultations",
+        "D": "Provide technical consultations in all IT fields."
+      },
+      "BUSINESS": {
+        "T": "IT Business Solutions",
+        "D": "Comprehensive IT solutions for business needs."
+      },
+      "WEB": { "T": "Web Development", "D": "Modern web application development." },
+      "APP_DEV": {
+        "T": "Application Development",
+        "D": "Custom application development outsourcing."
+      },
+      "MOBILE": { "T": "Mobile Development", "D": "Native and cross-platform mobile apps." },
+      "HEALTHCARE": { "T": "Healthcare & ERP", "D": "Specialized in Healthcare & ERP Solutions." }
+    }
+  },
+
+  "CONTACT": {
+    "WHATSAPP": {
+      "TOOLTIP": "Chat with us"
+    },
+    "HERO": {
+      "TITLE": "Contact Us",
+      "SUBTITLE": "Get in touch with us for any inquiries or support"
+    },
+    "INFO": {
+      "ADDRESS": { "TITLE": "Address" },
+      "PHONE": { "TITLE": "Phone" },
+      "MOBILE": { "TITLE": "Mobile" },
+      "EMAIL": { "TITLE": "Email" }
+    },
+    "FORM": {
+      "TITLE": "Send Us a Message",
+      "NAME_LABEL": "Full Name *",
+      "NAME_PLACEHOLDER": "Enter your full name",
+      "EMAIL_LABEL": "Email Address *",
+      "EMAIL_PLACEHOLDER": "your.email@example.com",
+      "PHONE_LABEL": "Phone Number",
+      "PHONE_PLACEHOLDER": "+20 XXX XXX XXXX",
+      "SUBJECT_LABEL": "Subject *",
+      "SUBJECT_PLACEHOLDER": "Regarding...",
+      "MESSAGE_LABEL": "Message *",
+      "MESSAGE_PLACEHOLDER": "Tell us more...",
+      "SUBMIT": "Send Message"
+    },
+    "HOURS": {
+      "TITLE": "Office Hours",
+      "SUN_THU": "Sunday - Thursday",
+      "SUN_THU_TIME": "9 AM - 5 PM",
+      "FRI_SAT": "Friday - Saturday",
+      "FRI_SAT_TIME": "Closed"
+    },
+    "SOCIAL": {
+      "TITLE": "Connect With Us"
+    },
+    "MAP": {
+      "TITLE": "Visit Our Office",
+      "ADDRESS1": "52 Building Shamal Sinai",
+      "ADDRESS2": "Khamsen St, Zahraa Maadi, Maadi, Cairo"
+    },
+    "TOAST": {
+      "SUMMARY": "Message Sent",
+      "DETAIL": "Thank you! We will get back to you soon."
+    }
+  },
+
+  "VALIDATIONS": {
+    "NAME": {
+      "REQUIRED": "Name is required",
+      "PATTERN": "Name can only contain letters and spaces",
+      "MINLENGTH": "Name must be at least 3 characters long",
+      "MAXLENGTH": "Name must be at most 20 characters long"
+    },
+    "EMAIL": {
+      "REQUIRED": "Please enter your email address",
+      "PATTERN": "Please enter a valid email address"
+    },
+    "PHONE": {
+      "REQUIRED": "Please enter your phone number",
+      "PATTERN": "Please enter a valid phone number"
+    },
+    "MESSAGE": {
+      "REQUIRED": "Message is required"
+    }
+  },
+
+  "NOT_FOUND": {
+    "CODE": "404",
+    "TITLE": "Page Not Found",
+    "MESSAGE": "Oops! The page you're looking for doesn't exist.",
+    "SUB_MESSAGE": "It might have been moved or deleted, or perhaps the URL was mistyped.",
+    "ACTIONS": {
+      "HOME": "Go to Homepage",
+      "BACK": "Go Back"
+    },
+    "QUICK_LINKS_TITLE": "You might be looking for:",
+    "LINKS": {
+      "HOME": { "LABEL": "Home", "DESC": "Return to homepage" },
+      "PRODUCTS": { "LABEL": "Products", "DESC": "Explore our solutions" },
+      "ABOUT": { "LABEL": "About Us", "DESC": "Learn about OPS" },
+      "PARTNERS": { "LABEL": "Partners", "DESC": "Explore our partners" },
+      "CONTACT": { "LABEL": "Contact", "DESC": "Get in touch" }
+    },
+    "HELP": {
+      "TITLE": "Need Help?",
+      "DESC": "If you believe this is an error or need assistance, please don't hesitate to contact us.",
+      "BUTTON": "Contact Support"
+    }
+  },
+
+  "partners": {
+    "hero": {
+      "title": "Our Partners",
+      "subtitle": "Strategic partners helping us deliver excellence across the Arab Gulf region"
+    },
+    "badge": {
+      "premierPartner": "Premier Partner"
+    },
+    "najd": {
+      "title": "NAJD",
+      "subtitle": "Business Solutions",
+      "mainHeading": "Premier Sales & Marketing Partner",
+      "description1": "NAJD Business Solutions is our",
+      "description1Bold": "exclusive agent and strategic partner",
+      "description1Continue": "for marketing and distributing PremiumCare HMIS across the",
+      "description1KSA": "Kingdom of Saudi Arabia",
+      "description1And": "and the",
+      "description1Gulf": "Arab Gulf countries",
+      "description2": "With deep market expertise and strong relationships with healthcare institutions throughout the region, NAJD plays a crucial role in bringing our innovative healthcare solutions to hospitals and medical facilities across the Gulf.",
+      "features": {
+        "marketLeadership": {
+          "title": "Market Leadership",
+          "description": "Leading distributor of PremiumCare HMIS in Saudi Arabia and Gulf region"
+        },
+        "healthcareFocus": {
+          "title": "Healthcare Focus",
+          "description": "Specialized in enterprise healthcare solutions and hospital management systems"
+        },
+        "regionalExpertise": {
+          "title": "Regional Expertise",
+          "description": "Deep understanding of Saudi and Gulf healthcare market requirements"
+        },
+        "revenueOptimization": {
+          "title": "Revenue Optimization",
+          "description": "Focus on delivering solutions that improve financial performance"
+        }
+      },
+      "location": {
+        "heading": "Location",
+        "country": "Kingdom of Saudi Arabia",
+        "serving": "Serving KSA & Arab Gulf Countries"
+      },
+      "contact": {
+        "heading": "Contact NAJD"
+      },
+      "button": "Visit NAJD Website"
+    },
+    "nebras": {
+      "title": "Nebras Technology",
+      "subtitle": "Software Development Partner",
+      "mainHeading": "Technology & Development Partner",
+      "description1": "Nebras Technology is a",
+      "description1Bold": "specialized software development company",
+      "description1Continue": "that collaborates with OPS in delivering cutting-edge technology solutions.",
+      "areas": {
+        "softwareDevelopment": {
+          "title": "Software Development",
+          "description": "Custom software solutions and development services"
+        },
+        "systemIntegration": {
+          "title": "System Integration",
+          "description": "Seamless integration of healthcare IT systems"
+        },
+        "technicalSupport": {
+          "title": "Technical Support",
+          "description": "Comprehensive technical and implementation support"
+        },
+        "solutionArchitecture": {
+          "title": "Solution Architecture",
+          "description": "Enterprise-grade solution design and architecture"
+        }
+      },
+      "connect": {
+        "heading": "Connect with Nebras",
+        "facebook": "Facebook"
+      }
+    },
+    "cta": {
+      "heading": "Interested in Partnership?",
+      "description": "Join our network of partners and help us deliver innovative healthcare solutions",
+      "button": "Contact Us"
+    }
+  }
+}

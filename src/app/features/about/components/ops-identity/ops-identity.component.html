@@ -1,0 +1,46 @@
+<section class="py-20">
+  <div class="section-content-wrapper">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+      @for (card of aboutCardInfo(); track card.id) {
+        <app-info-card
+          appScrollReveal
+          [style.transition-delay]="$index * 150 + 'ms'"
+          [icon]="card.icon"
+          [title]="card.title | translate"
+        >
+          @if (card.type === 'text') {
+            <p class="text-slate-600 dark:text-slate-400" [class]="card.textClass">
+              {{ card.text | translate }}
+            </p>
+          } @else if (card.type === 'list') {
+            <ul class="text-slate-600 dark:text-slate-400 space-y-2 font-medium">
+              @for (item of card.items; track item) {
+                <li>{{ item | translate }}</li>
+              }
+            </ul>
+          }
+        </app-info-card>
+      }
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="col-span-full text-center mb-8" appScrollReveal>
+        <h2 class="text-4xl font-bold mb-4 dark:text-white">
+          {{ 'ABOUT.CORE_VALUES.TITLE' | translate }}
+        </h2>
+      </div>
+      @for (value of values(); track value.title) {
+        <app-info-card
+          appScrollReveal
+          [style.transition-delay]="$index * 100 + 'ms'"
+          [icon]="value.icon"
+          [title]="value.title | translate"
+        >
+          <p class="text-slate-600 dark:text-slate-400">
+            {{ value.description | translate }}
+          </p>
+        </app-info-card>
+      }
+    </div>
+  </div>
+</section>

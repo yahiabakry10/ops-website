@@ -1,0 +1,30 @@
+/* hero.component.css */
+:host {
+  display: block;
+  position: relative;
+}
+
+section {
+  position: relative;
+  /* Change z-index to 1 to ensure it's a stable base */
+  z-index: 1;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* CRITICAL: Keep it at 0, but ensure the content above is higher */
+  z-index: 0;
+  pointer-events: none;
+  /* Add this to ensure it doesn't get squashed by layout changes */
+  display: block;
+}
+
+.relative.z-10 {
+  /* This ensures your text/CTA stay above the hex nodes */
+  z-index: 10;
+}

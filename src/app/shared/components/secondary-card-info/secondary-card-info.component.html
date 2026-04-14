@@ -1,0 +1,38 @@
+<div
+  class="group/sec relative h-full overflow-hidden rounded-2xl bg-white dark:bg-slate-900 p-6 shadow-lg ring-1 ring-gray-900/5 dark:ring-white/5 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-primary/10 dark:hover:shadow-brand-secondary/20 hover:-translate-y-1"
+>
+  <!-- Subtle gradient border effect -->
+  <div
+    class="absolute inset-0 rounded-2xl bg-linear-to-r from-brand-primary/10 via-brand-secondary/10 to-brand-primary/10 dark:from-brand-secondary/15 dark:via-brand-primary/15 dark:to-brand-secondary/15 opacity-0 transition-opacity duration-300 group-hover/sec:opacity-100"
+  ></div>
+
+  <!-- Inner content -->
+  <div class="relative flex items-start gap-5">
+    <!-- Icon container -->
+    <div
+      class="flex size-14 shrink-0 items-center justify-center rounded-xl bg-linear-to-br from-brand-primary to-brand-secondary shadow-md shadow-brand-primary/40 dark:shadow-brand-secondary/30 transition-all duration-300 group-hover/sec:scale-105 group-hover/sec:shadow-brand-primary/60 dark:group-hover/sec:shadow-brand-secondary/50"
+    >
+      <i
+        [class]="`pi ${iconClass()}  text-white transition-all duration-300`"
+        style="font-size: 1.25rem"
+      ></i>
+    </div>
+
+    <!-- Text content -->
+    <div class="flex-1 pt-0.5">
+      <h4
+        class="mb-2 text-base font-bold bg-linear-to-r from-gray-900 to-gray-700 dark:from-slate-50 dark:to-slate-300 bg-clip-text text-transparent"
+      >
+        <ng-content select="[header]"></ng-content>
+      </h4>
+      <div class="text-[0.9rem] text-gray-600 dark:text-slate-400 leading-relaxed line-clamp-2">
+        <ng-content select="[body]"></ng-content>
+      </div>
+    </div>
+  </div>
+
+  <!-- Decorative corner accent -->
+  <div
+    class="absolute -right-8 -top-8 size-24 rounded-full bg-linear-to-br from-brand-primary/5 to-brand-secondary/5 dark:from-brand-secondary/10 dark:to-brand-primary/10 blur-2xl transition-all duration-300 group-hover/sec:scale-150"
+  ></div>
+</div>

@@ -1,0 +1,35 @@
+<div class="premium-card group">
+  <!-- Gradient overlay on hover -->
+  <div
+    class="absolute inset-0 bg-linear-to-br from-brand-primary/3 via-transparent to-brand-secondary/3 dark:from-brand-secondary/5 dark:via-transparent dark:to-brand-primary/5 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+  ></div>
+
+  <!-- Animated shine effect -->
+  <div
+    class="absolute -inset-full top-0 block h-full w-1/2 -skew-x-12 bg-linear-to-r from-transparent to-white dark:to-white/20 opacity-20 group-hover:animate-[shine_1s] pointer-events-none"
+  ></div>
+
+  <div class="relative flex flex-col items-center text-center">
+    <!-- Icon container with gradient background -->
+    <div
+      class="mb-6 flex size-16 items-center justify-center rounded-2xl bg-linear-to-br from-brand-primary to-brand-secondary shadow-lg shadow-brand-primary/50 dark:shadow-brand-secondary/30 transition-transform duration-300 group-hover:scale-110 group-hover:shadow-brand-primary/70 dark:group-hover:shadow-brand-secondary/50"
+    >
+      <i
+        [class]="`pi ${icon()} text-white transition-all duration-300`"
+        style="font-size: 1.25rem"
+      ></i>
+    </div>
+
+    <!-- Title with gradient text -->
+    <h3
+      class="mb-3 text-xl font-bold bg-linear-to-br from-gray-900 to-gray-700 dark:from-slate-50 dark:to-slate-300 bg-clip-text text-transparent"
+    >
+      {{ title() | translate }}
+    </h3>
+
+    <!-- Description -->
+    <div class="text-[0.95rem] text-gray-600 dark:text-slate-400 leading-relaxed max-w-sm">
+      <ng-content />
+    </div>
+  </div>
+</div>

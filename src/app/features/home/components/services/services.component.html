@@ -1,0 +1,27 @@
+<section class="py-20">
+  <div class="section-content-wrapper">
+    <div class="text-center mb-16" appScrollReveal>
+      <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+        {{ 'SERVICES.HEADER' | translate }}
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+        {{ 'SERVICES.SUBHEADER' | translate }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (service of services; track service.title) {
+        <app-info-card
+          appScrollReveal
+          [style.transition-delay]="$index * 100 + 'ms'"
+          [icon]="service.icon"
+          [title]="`SERVICES.ITEMS.${service.key}.TITLE` | translate"
+        >
+          <p class="text-slate-600 dark:text-slate-400">
+            {{ `SERVICES.ITEMS.${service.key}.DESC` | translate }}
+          </p>
+        </app-info-card>
+      }
+    </div>
+  </div>
+</section>

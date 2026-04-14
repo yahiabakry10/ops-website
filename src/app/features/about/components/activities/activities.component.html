@@ -1,0 +1,21 @@
+<section class="py-20">
+  <div class="section-content-wrapper">
+    <h2 class="text-4xl font-bold mb-16 dark:text-white" appScrollReveal>
+      {{ 'ABOUT.ACTIVITIES.TITLE' | translate }}
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      @for (act of activities(); track act.title) {
+        <app-info-card
+          appScrollReveal
+          [style.transition-delay]="$index * 150 + 'ms'"
+          [icon]="act.icon"
+          [title]="act.title"
+        >
+          <p class="text-slate-600 dark:text-slate-400">
+            {{ act.desc | translate }}
+          </p>
+        </app-info-card>
+      }
+    </div>
+  </div>
+</section>

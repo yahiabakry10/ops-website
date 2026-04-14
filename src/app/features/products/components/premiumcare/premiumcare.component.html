@@ -1,0 +1,217 @@
+<section class="pt-20">
+  <div class="section-content-wrapper">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+      <div appScrollReveal [hiddenClasses]="['opacity-0', '-translate-x-12']">
+        <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-6">
+          <span class="text-[#2E5AAC] dark:text-[#4A90E2]">{{
+            'PRODUCTS.HMIS.TITLE' | translate
+          }}</span>
+          HMIS
+        </h2>
+        <p class="text-xl text-slate-700 dark:text-slate-300 mb-6">
+          {{ 'PRODUCTS.HMIS.SUBTITLE' | translate }}
+        </p>
+        <p class="text-slate-600 dark:text-slate-400 mb-6 leading-relaxed">
+          {{ 'PRODUCTS.HMIS.DESCRIPTION' | translate }}
+        </p>
+
+        <div class="space-y-3">
+          @for (check of hmisChecks(); track check) {
+            <div class="flex items-start gap-3">
+              <i class="pi pi-check-circle text-green-600 dark:text-green-400 text-xl mt-1"></i>
+              <p class="text-slate-700 dark:text-slate-300">{{ check | translate }}</p>
+            </div>
+          }
+        </div>
+      </div>
+      <div appScrollReveal [hiddenClasses]="['opacity-0', 'translate-x-12']">
+        <img
+          src="/images/premiumHMIS.jpg"
+          alt="PremiumCare HMIS dashboard showing hospital management interface"
+          class="rounded-xl shadow-2xl w-full h-auto dark:opacity-90 dark:shadow-blue-900/10"
+        />
+      </div>
+    </div>
+
+    <div class="mb-16">
+      <h3
+        class="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center"
+        appScrollReveal
+      >
+        {{ 'PRODUCTS.FEATURES_SECTION.TITLE' | translate }}
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        @for (feature of premiumCareFeatures(); track feature.title) {
+          <app-secondary-card-info
+            appScrollReveal
+            [style.transition-delay]="$index * 100 + 'ms'"
+            [iconClass]="feature.icon"
+          >
+            <span header>{{ feature.title | translate }}</span>
+            <span body>{{ feature.description | translate }}</span>
+          </app-secondary-card-info>
+        }
+      </div>
+    </div>
+
+    <div class="mb-16" appScrollReveal>
+      <h3 class="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center">
+        {{ 'PRODUCTS.TABS.TITLE' | translate }}
+      </h3>
+
+      <div class="border-b border-slate-200 dark:border-slate-700 mb-0" role="tablist" aria-label="PremiumCare Module Categories">
+        <div class="flex gap-0">
+          <button
+            type="button"
+            (click)="setActiveTab(0)"
+            role="tab"
+            [attr.aria-selected]="activeTab() === 0"
+            aria-controls="front-office-panel"
+            class="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium border-b-2 transition-colors duration-200"
+            [class]="
+              activeTab() === 0
+                ? 'border-[#2E5AAC] text-[#2E5AAC] dark:border-[#4A90E2] dark:text-[#4A90E2]'
+                : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-600'
+            "
+          >
+            <i class="pi pi-hospital" aria-hidden="true"></i>{{ 'PRODUCTS.TABS.FRONT' | translate }}
+          </button>
+
+          <button
+            type="button"
+            (click)="setActiveTab(1)"
+            role="tab"
+            [attr.aria-selected]="activeTab() === 1"
+            aria-controls="financial-panel"
+            class="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium border-b-2 transition-colors duration-200"
+            [class]="
+              activeTab() === 1
+                ? 'border-[#2E5AAC] text-[#2E5AAC] dark:border-[#4A90E2] dark:text-[#4A90E2]'
+                : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-600'
+            "
+          >
+            <i class="pi pi-dollar" aria-hidden="true"></i>{{ 'PRODUCTS.TABS.FINANCIAL' | translate }}
+          </button>
+
+          <button
+            type="button"
+            (click)="setActiveTab(2)"
+            role="tab"
+            [attr.aria-selected]="activeTab() === 2"
+            aria-controls="back-office-panel"
+            class="inline-flex items-center gap-2 px-5 py-3 text-sm font-medium border-b-2 transition-colors duration-200"
+            [class]="
+              activeTab() === 2
+                ? 'border-[#2E5AAC] text-[#2E5AAC] dark:border-[#4A90E2] dark:text-[#4A90E2]'
+                : 'border-transparent text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-600'
+            "
+          >
+            <i class="pi pi-cog" aria-hidden="true"></i>{{ 'PRODUCTS.TABS.BACK' | translate }}
+          </button>
+        </div>
+      </div>
+
+      @if (activeTab() === 0) {
+        <div id="front-office-panel" role="tabpanel" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+          @for (module of premiumCareModules().frontOffice; track module) {
+            <div
+              appScrollReveal
+              [style.transition-delay]="$index * 50 + 'ms'"
+              class="flex items-start gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+            >
+              <i class="pi pi-check text-[#2E5AAC] dark:text-[#4A90E2] mt-1" aria-hidden="true"></i>
+              <span class="text-slate-700 dark:text-slate-300">{{ module | translate }}</span>
+            </div>
+          }
+        </div>
+      }
+
+      @if (activeTab() === 1) {
+        <div id="financial-panel" role="tabpanel" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+          @for (module of premiumCareModules().financial; track module) {
+            <div
+              appScrollReveal
+              [style.transition-delay]="$index * 50 + 'ms'"
+              class="flex items-start gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+            >
+              <i class="pi pi-check text-[#2E5AAC] dark:text-[#4A90E2] mt-1" aria-hidden="true"></i>
+              <span class="text-slate-700 dark:text-slate-300">{{ module | translate }}</span>
+            </div>
+          }
+        </div>
+      }
+
+      @if (activeTab() === 2) {
+        <div id="back-office-panel" role="tabpanel" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 pt-4">
+          @for (module of premiumCareModules().backOffice; track module) {
+            <div
+              appScrollReveal
+              [style.transition-delay]="$index * 50 + 'ms'"
+              class="flex items-start gap-3 p-3 bg-slate-50 dark:bg-slate-800/50 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors"
+            >
+              <i class="pi pi-check text-[#2E5AAC] dark:text-[#4A90E2] mt-1" aria-hidden="true"></i>
+              <span class="text-slate-700 dark:text-slate-300">{{ module | translate }}</span>
+            </div>
+          }
+        </div>
+      }
+    </div>
+
+    <div class="mb-20">
+      <h3
+        class="text-3xl font-bold text-slate-900 dark:text-white mb-8 text-center"
+        appScrollReveal
+      >
+        {{ 'PRODUCTS.ACCORDION.TITLE' | translate }}
+      </h3>
+
+      <div class="w-full">
+        @for (item of moduleDetails(); track item.id) {
+          <div
+            appScrollReveal
+            [style.transition-delay]="$index * 100 + 'ms'"
+            class="mb-4 border border-slate-200 dark:border-slate-800 rounded-lg overflow-hidden"
+          >
+            <button
+              type="button"
+              (click)="togglePanel(item.id)"
+              [attr.aria-expanded]="isOpen(item.id)"
+              [attr.aria-controls]="item.id + '-content'"
+              class="w-full flex items-center justify-between bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors p-4 font-semibold text-lg text-slate-800 dark:text-white text-left"
+            >
+              <span>{{ item.header | translate }}</span>
+              <i
+                class="pi pi-chevron-down text-slate-500 dark:text-slate-400 transition-transform duration-300 shrink-0"
+                [class.rotate-180]="isOpen(item.id)"
+                aria-hidden="true"
+              ></i>
+            </button>
+            <div
+              [id]="item.id + '-content'"
+              role="region"
+              class="overflow-hidden transition-all duration-300 ease-in-out"
+              [class]="isOpen(item.id) ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'"
+            >
+
+              <div class="bg-white dark:bg-slate-800/50 p-4 space-y-3">
+                <p class="text-slate-700 dark:text-slate-300 mb-3">
+                  {{ item.description | translate }}
+                </p>
+                @for (feature of item.features; track feature) {
+                  <div class="flex items-start gap-2">
+                    <i
+                      class="pi pi-check-circle text-[#2E5AAC] dark:text-[#4A90E2] mt-0.5 shrink-0"
+                    ></i>
+                    <span class="text-slate-600 dark:text-slate-400 text-sm">{{
+                      feature | translate
+                    }}</span>
+                  </div>
+                }
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

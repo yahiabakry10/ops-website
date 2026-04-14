@@ -1,0 +1,44 @@
+<section id="customers" class="py-20">
+  <div class="section-content-wrapper">
+    <div class="text-center mb-16" appScrollReveal>
+      <h2 class="text-4xl font-bold mb-4 dark:text-white">
+        {{ 'ABOUT.CUSTOMERS.TITLE' | translate }}
+      </h2>
+      <p class="text-xl text-gray-600 dark:text-gray-400">
+        {{ 'ABOUT.CUSTOMERS.SUBTITLE' | translate }}
+      </p>
+    </div>
+
+    @for (cat of customers(); track cat.category) {
+      <div class="mb-16">
+        <h3
+          appScrollReveal
+          class="text-2xl font-bold text-[#2E5AAC] dark:text-[#4A90E2] mb-8 flex items-center gap-3 border-b border-gray-100 dark:border-gray-800 pb-4"
+        >
+          <i class="pi pi-building"></i> {{ cat.category | translate }}
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
+          @for (cust of cat.list; track cust) {
+            <div
+              appScrollReveal
+              [style.transition-delay]="$index * 50 + 'ms'"
+              class="group flex items-center gap-4 py-3 px-2 border-b border-gray-50 dark:border-slate-800/50 hover:bg-gray-50/50 dark:hover:bg-slate-800/30 transition-all duration-200"
+            >
+              <div
+                class="flex-none flex items-center justify-center w-8 h-8 rounded-full bg-green-50 dark:bg-green-900/20 group-hover:bg-green-100 dark:group-hover:bg-green-900/40 transition-colors"
+              >
+                <i class="pi pi-check text-green-600 dark:text-green-400 font-bold"></i>
+              </div>
+              <span
+                class="text-gray-700 dark:text-gray-300 font-medium group-hover:text-[#2E5AAC] dark:group-hover:text-[#4A90E2] transition-colors"
+              >
+                {{ cust | translate }}
+              </span>
+            </div>
+          }
+        </div>
+      </div>
+    }
+  </div>
+</section>

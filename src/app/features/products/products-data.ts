@@ -1,0 +1,152 @@
+import type {
+  ErpModule,
+  ModuleDetail,
+  Platform,
+  PremiumCareFeature,
+  PremiumCareModules,
+} from './models/products.interface';
+
+export const PREMIUM_CARE_MODULES: PremiumCareModules = {
+  frontOffice: [
+    'PRODUCTS.MODULES.FRONT.RECEPTION',
+    'PRODUCTS.MODULES.FRONT.INPATIENT',
+    'PRODUCTS.MODULES.FRONT.CLINICS',
+    'PRODUCTS.MODULES.FRONT.RADIOLOGY',
+    'PRODUCTS.MODULES.FRONT.LABORATORY',
+    'PRODUCTS.MODULES.FRONT.BLOOD_BANK',
+    'PRODUCTS.MODULES.FRONT.EMERGENCY',
+    'PRODUCTS.MODULES.FRONT.OPERATING_ROOMS',
+    'PRODUCTS.MODULES.FRONT.NURSE_STATIONS',
+    'PRODUCTS.MODULES.FRONT.PHARMACY',
+    'PRODUCTS.MODULES.FRONT.DOCTORS_DASHBOARD',
+    'PRODUCTS.MODULES.FRONT.DIALYSIS',
+    'PRODUCTS.MODULES.FRONT.EMR',
+    'PRODUCTS.MODULES.FRONT.ORDERS_ENTRY',
+    'PRODUCTS.MODULES.FRONT.DECISION_SUPPORT',
+  ],
+  financial: [
+    'PRODUCTS.MODULES.FINANCIAL.PATIENT_CONTRACTS',
+    'PRODUCTS.MODULES.FINANCIAL.PATIENT_ACCOUNTS',
+    'PRODUCTS.MODULES.FINANCIAL.DOCTOR_ACCOUNTS',
+    'PRODUCTS.MODULES.FINANCIAL.CASH_MANAGEMENT',
+    'PRODUCTS.MODULES.FINANCIAL.NOTES',
+  ],
+  backOffice: [
+    'PRODUCTS.MODULES.BACK.INVENTORY',
+    'PRODUCTS.MODULES.BACK.PURCHASING',
+    'PRODUCTS.MODULES.BACK.ACCOUNTS_PAYABLE',
+    'PRODUCTS.MODULES.BACK.FIXED_ASSETS',
+    'PRODUCTS.MODULES.BACK.GENERAL_LEDGER',
+    'PRODUCTS.MODULES.BACK.HR_PAYROLL',
+    'PRODUCTS.MODULES.BACK.SYSTEM_SETUP',
+  ],
+};
+
+export const PREMIUM_CARE_FEATURES: PremiumCareFeature[] = [
+  {
+    title: 'PRODUCTS.FEATURES_SECTION.PATIENT_MGMT.T',
+    description: 'PRODUCTS.FEATURES_SECTION.PATIENT_MGMT.D',
+    icon: 'pi-users',
+  },
+  {
+    title: 'PRODUCTS.FEATURES_SECTION.CLINICAL.T',
+    description: 'PRODUCTS.FEATURES_SECTION.CLINICAL.D',
+    icon: 'pi-heart',
+  },
+  {
+    title: 'PRODUCTS.FEATURES_SECTION.LAB.T',
+    description: 'PRODUCTS.FEATURES_SECTION.LAB.D',
+    icon: 'pi-chart-bar',
+  },
+  {
+    title: 'PRODUCTS.FEATURES_SECTION.PHARMACY.T',
+    description: 'PRODUCTS.FEATURES_SECTION.PHARMACY.D',
+    icon: 'pi-tag',
+  },
+  {
+    title: 'PRODUCTS.FEATURES_SECTION.FINANCIAL.T',
+    description: 'PRODUCTS.FEATURES_SECTION.FINANCIAL.D',
+    icon: 'pi-dollar',
+  },
+  {
+    title: 'PRODUCTS.FEATURES_SECTION.DECISION.T',
+    description: 'PRODUCTS.FEATURES_SECTION.DECISION.D',
+    icon: 'pi-chart-line',
+  },
+];
+
+export const MOBILE_APP_FEATURES: string[] = [
+  'PRODUCTS.MOBILE.F1',
+  'PRODUCTS.MOBILE.F2',
+  'PRODUCTS.MOBILE.F3',
+  'PRODUCTS.MOBILE.F4',
+  'PRODUCTS.MOBILE.F5',
+  'PRODUCTS.MOBILE.F6',
+  'PRODUCTS.MOBILE.F7',
+];
+
+export const MODULE_DETAILS: ModuleDetail[] = [
+  {
+    id: 'lis',
+    header: 'PRODUCTS.ACCORDION.LIS.H',
+    description: 'PRODUCTS.ACCORDION.LIS.D',
+    features: [
+      'PRODUCTS.ACCORDION.LIS.F1',
+      'PRODUCTS.ACCORDION.LIS.F2',
+      'PRODUCTS.ACCORDION.LIS.F3',
+      'PRODUCTS.ACCORDION.LIS.F4',
+      'PRODUCTS.ACCORDION.LIS.F5',
+    ],
+  },
+  {
+    id: 'ris',
+    header: 'PRODUCTS.ACCORDION.RIS.H',
+    description: 'PRODUCTS.ACCORDION.RIS.D',
+    features: [
+      'PRODUCTS.ACCORDION.RIS.F1',
+      'PRODUCTS.ACCORDION.RIS.F2',
+      'PRODUCTS.ACCORDION.RIS.F3',
+      'PRODUCTS.ACCORDION.RIS.F4',
+      'PRODUCTS.ACCORDION.RIS.F5',
+    ],
+  },
+  {
+    id: 'emr',
+    header: 'PRODUCTS.ACCORDION.EMR.H',
+    description: 'PRODUCTS.ACCORDION.EMR.D',
+    features: [
+      'PRODUCTS.ACCORDION.EMR.F1',
+      'PRODUCTS.ACCORDION.EMR.F2',
+      'PRODUCTS.ACCORDION.EMR.F3',
+      'PRODUCTS.ACCORDION.EMR.F4',
+      'PRODUCTS.ACCORDION.EMR.F5',
+    ],
+  },
+  {
+    id: 'order',
+    header: 'PRODUCTS.ACCORDION.ORDER.H',
+    description: 'PRODUCTS.ACCORDION.ORDER.D',
+    features: [
+      'PRODUCTS.ACCORDION.ORDER.F1',
+      'PRODUCTS.ACCORDION.ORDER.F2',
+      'PRODUCTS.ACCORDION.ORDER.F3',
+      'PRODUCTS.ACCORDION.ORDER.F4',
+    ],
+  },
+];
+
+export const ERP_MODULES: ErpModule[] = [
+  { title: 'PRODUCTS.ERP.MOD_FIN', icon: 'pi-dollar' },
+  { title: 'PRODUCTS.ERP.MOD_HR', icon: 'pi-users' },
+  { title: 'PRODUCTS.ERP.MOD_PROC', icon: 'pi-shopping-cart' },
+  { title: 'PRODUCTS.ERP.MOD_INV', icon: 'pi-box' },
+];
+
+export const PLATFORMS: Platform[] = [
+  { title: 'PRODUCTS.PLATFORMS.MS', subtitle: 'PRODUCTS.PLATFORMS.MS_SUB', icon: 'pi-microsoft' },
+  {
+    title: 'PRODUCTS.PLATFORMS.ORACLE',
+    subtitle: 'PRODUCTS.PLATFORMS.ORACLE_SUB',
+    icon: 'pi-database',
+  },
+];

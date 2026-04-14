@@ -1,0 +1,385 @@
+<section>
+  <app-main-header appScrollReveal>
+    <h1 class="hero-title">{{ 'partners.hero.title' | translate }}</h1>
+
+    <p class="hero-subtitle">
+      {{ 'partners.hero.subtitle' | translate }}
+    </p>
+  </app-main-header>
+
+  <section class="py-20 relative overflow-hidden bg-white dark:bg-slate-950">
+    <div class="absolute inset-0">
+      <div
+        class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full opacity-10 dark:opacity-5 animate-scale-move"
+        style="background: radial-gradient(circle, rgba(46, 90, 172, 0.4) 0%, transparent 70%)"
+      ></div>
+
+      <div
+        class="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full opacity-10 dark:opacity-5 animate-scale-move-reverse"
+        style="background: radial-gradient(circle, rgba(74, 144, 226, 0.4) 0%, transparent 70%)"
+      ></div>
+    </div>
+
+    <div class="section-content-wrapper relative z-10">
+      <div class="text-center mb-12" appScrollReveal>
+        <div
+          class="inline-flex items-center gap-3 px-6 py-3 bg-linear-to-r from-brand-primary to-brand-secondary rounded-full shadow-2xl border-2 border-brand-secondary/50 dark:border-brand-primary/50"
+        >
+          <i class="pi pi-star-fill pi-spin text-yellow-200" style="font-size: 1.25rem"></i>
+          <span class="text-white font-bold text-lg uppercase tracking-wide">{{
+            'partners.badge.premierPartner' | translate
+          }}</span>
+          <i class="pi pi-star-fill pi-spin text-yellow-200" style="font-size: 1.25rem"></i>
+        </div>
+      </div>
+
+      <div
+        class="relative"
+        appScrollReveal
+        [transitionClasses]="['transition-all', 'duration-1000', 'ease-out']"
+      >
+        <div
+          class="absolute -inset-1 bg-linear-to-r from-brand-primary via-brand-secondary to-brand-primary rounded-3xl blur-xl opacity-30 dark:opacity-20 animate-pulse"
+        ></div>
+
+        <div
+          class="relative bg-linear-to-br from-white via-blue-50/30 to-blue-100/30 dark:from-slate-900 dark:via-slate-900/30 dark:to-slate-800/30 border-2 border-brand-primary/20 dark:border-brand-primary/30 shadow-2xl overflow-hidden rounded-2xl"
+        >
+          <div
+            class="absolute top-0 right-0 w-64 h-64 bg-linear-to-br from-brand-secondary/10 to-transparent rounded-full blur-3xl"
+          ></div>
+
+          <div
+            class="absolute bottom-0 left-0 w-64 h-64 bg-linear-to-tr from-brand-primary/10 to-transparent rounded-full blur-3xl"
+          ></div>
+
+          <div
+            class="absolute top-0 left-0 right-0 h-2 bg-linear-to-r from-brand-primary via-brand-secondary to-brand-primary animate-gradient-shift"
+            style="background-size: 200% 200%"
+          ></div>
+
+          <div class="relative py-12 px-8">
+            <div class="text-center mb-8" appScrollReveal>
+              <h2
+                class="text-6xl md:text-8xl font-bold mb-4 bg-linear-to-r from-brand-primary via-brand-secondary to-brand-primary bg-clip-text text-transparent animate-gradient-shift"
+                style="background-size: 200% auto"
+              >
+                {{ 'partners.najd.title' | translate }}
+              </h2>
+
+              <p class="text-2xl font-semibold text-brand-primary dark:text-brand-secondary">
+                {{ 'partners.najd.subtitle' | translate }}
+              </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+              <div
+                class="bg-linear-to-r from-blue-50 to-blue-100 dark:from-slate-800/50 dark:to-slate-700/50 rounded-2xl p-8 mb-8 border border-brand-primary/20 dark:border-brand-primary/30 shadow-lg"
+                appScrollReveal
+              >
+                <h3
+                  class="text-3xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3"
+                >
+                  <i
+                    class="pi pi-briefcase text-brand-primary dark:text-brand-secondary animate-wiggle"
+                  ></i>
+
+                  {{ 'partners.najd.mainHeading' | translate }}
+                </h3>
+
+                <p class="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                  {{ 'partners.najd.description1' | translate }}
+
+                  <span class="font-bold text-brand-primary dark:text-brand-secondary">{{
+                    'partners.najd.description1Bold' | translate
+                  }}</span>
+
+                  {{ 'partners.najd.description1Continue' | translate }}
+
+                  <span class="font-bold">{{ 'partners.najd.description1KSA' | translate }}</span>
+                  {{ 'partners.najd.description1And' | translate }}
+
+                  <span class="font-bold">{{ 'partners.najd.description1Gulf' | translate }}</span
+                  >.
+                </p>
+
+                <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                  {{ 'partners.najd.description2' | translate }}
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                @for (feature of najdFeatures; track $index) {
+                  <div
+                    appScrollReveal
+                    [transitionClasses]="[
+                      'transition-all',
+                      'duration-700',
+                      'ease-out',
+                      'delay-100',
+                    ]"
+                  >
+                    <app-secondary-card-info [iconClass]="feature.icon">
+                      <span header>{{ feature.title | translate }}</span>
+                      <span body>{{ feature.description | translate }}</span>
+                    </app-secondary-card-info>
+                  </div>
+                }
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div
+                  appScrollReveal
+                  [hiddenClasses]="['opacity-0', '-translate-x-12']"
+                  [visibleClasses]="['opacity-100', 'translate-x-0']"
+                  class="special-partners-card"
+                >
+                  <div class="text-center py-6">
+                    <div class="inline-block mb-4 animate-bounce-slow">
+                      <div
+                        class="w-16 h-16 bg-linear-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center mx-auto shadow-lg"
+                      >
+                        <i
+                          class="pi pi-map-marker text-3xl text-white"
+                          style="font-size: 1.25rem"
+                        ></i>
+                      </div>
+                    </div>
+
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-2 text-lg">
+                      {{ 'partners.najd.location.heading' | translate }}
+                    </h4>
+
+                    <p class="text-gray-700 dark:text-gray-300 font-semibold">
+                      {{ 'partners.najd.location.country' | translate }}
+                    </p>
+
+                    <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">
+                      {{ 'partners.najd.location.serving' | translate }}
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  appScrollReveal
+                  [hiddenClasses]="['opacity-0', 'translate-x-12']"
+                  [visibleClasses]="['opacity-100', 'translate-x-0']"
+                  class="special-partners-card"
+                >
+                  <div class="text-center py-6">
+                    <div class="inline-block mb-4 animate-rotate-slow">
+                      <div
+                        class="w-16 h-16 bg-linear-to-br from-brand-secondary to-brand-primary rounded-full flex items-center justify-center mx-auto shadow-lg"
+                      >
+                        <i class="pi pi-phone text-3xl text-white" style="font-size: 1.25rem"></i>
+                      </div>
+                    </div>
+
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-3 text-lg">
+                      {{ 'partners.najd.contact.heading' | translate }}
+                    </h4>
+
+                    <div class="space-y-2 text-sm">
+                      <p class="text-gray-700 dark:text-gray-300">
+                        <i
+                          class="pi pi-phone mr-2 text-brand-primary dark:text-brand-secondary"
+                        ></i>
+
+                        <span class="font-semibold">+966 50 394 4466</span>
+                      </p>
+
+                      <p class="text-gray-700 dark:text-gray-300">
+                        <i
+                          class="pi pi-envelope mr-2 text-brand-primary dark:text-brand-secondary"
+                        ></i>
+
+                        <span class="font-semibold">info@najdbs.com</span>
+                      </p>
+
+                      <p class="text-gray-700 dark:text-gray-300">
+                        <i
+                          class="pi pi-globe mr-2 text-brand-primary dark:text-brand-secondary"
+                        ></i>
+
+                        <a
+                          href="https://najdbs.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          class="font-semibold text-brand-primary dark:text-brand-secondary hover:text-brand-secondary dark:hover:text-brand-primary"
+                          >najdbs.com</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-8" appScrollReveal>
+                <a href="https://najdbs.com" target="_blank" rel="noopener noreferrer">
+                  <button
+                    class="px-8 py-4 bg-linear-to-r from-brand-primary to-brand-secondary border-none text-white text-lg shadow-xl hover:shadow-2xl hover:scale-105 transition-all rounded-md inline-flex items-center gap-2 cursor-pointer"
+                  >
+                    <span>{{ 'partners.najd.button' | translate }}</span>
+
+                    <i class="pi pi-external-link"></i>
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="py-20 bg-linear-to-b from-gray-50 to-white dark:from-slate-900 dark:to-slate-950 relative overflow-hidden"
+  >
+    <div
+      class="absolute top-0 right-0 w-96 h-96 bg-brand-secondary/20 dark:bg-brand-secondary/10 rounded-full opacity-20 blur-3xl"
+    ></div>
+
+    <div
+      class="absolute bottom-0 left-0 w-96 h-96 bg-brand-primary/20 dark:bg-brand-primary/10 rounded-full opacity-20 blur-3xl"
+    ></div>
+
+    <div class="section-content-wrapper relative z-10">
+      <div>
+        <div
+          class="max-w-5xl mx-auto shadow-xl border border-gray-200 dark:border-slate-800 bg-white dark:bg-slate-900 rounded-lg relative overflow-hidden"
+          appScrollReveal
+        >
+          <div
+            class="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-brand-primary via-brand-secondary to-brand-primary animate-gradient-shift"
+            style="background-size: 200% 200%"
+          ></div>
+
+          <div class="relative py-12 px-8">
+            <div class="text-center mb-8" appScrollReveal>
+              <h2
+                class="text-5xl md:text-6xl font-bold mb-4 bg-linear-to-r from-brand-primary via-brand-secondary to-brand-primary bg-clip-text text-transparent"
+              >
+                {{ 'partners.nebras.title' | translate }}
+              </h2>
+
+              <p class="text-xl text-gray-600 dark:text-gray-400">
+                {{ 'partners.nebras.subtitle' | translate }}
+              </p>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+              <div
+                class="bg-linear-to-r from-blue-50 to-blue-100 dark:from-slate-800/50 dark:to-slate-700/50 rounded-2xl p-8 mb-8 border border-brand-primary/20 dark:border-brand-primary/30"
+                appScrollReveal
+              >
+                <h3
+                  class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-3"
+                >
+                  <i class="pi pi-code text-brand-primary dark:text-brand-secondary"></i>
+
+                  {{ 'partners.nebras.mainHeading' | translate }}
+                </h3>
+
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
+                  {{ 'partners.nebras.description1' | translate }}
+
+                  <span class="font-bold text-brand-primary dark:text-brand-secondary">{{
+                    'partners.nebras.description1Bold' | translate
+                  }}</span>
+
+                  {{ 'partners.nebras.description1Continue' | translate }}
+                </p>
+              </div>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                @for (area of nebrasAreas; track $index) {
+                  <div
+                    appScrollReveal
+                    [transitionClasses]="[
+                      'transition-all',
+                      'duration-700',
+                      'ease-out',
+                      'delay-100',
+                    ]"
+                  >
+                    <app-secondary-card-info [iconClass]="area.icon">
+                      <span header>{{ area.title | translate }}</span>
+                      <span body>{{ area.description | translate }}</span>
+                    </app-secondary-card-info>
+                  </div>
+                }
+              </div>
+
+              <div appScrollReveal>
+                <div
+                  class="bg-linear-to-r from-blue-50 to-blue-100 dark:from-slate-800/50 dark:to-slate-700/50 border-2 border-brand-primary/20 dark:border-brand-primary/30 rounded-lg p-6 shadow-md"
+                >
+                  <div class="text-center py-6">
+                    <div
+                      class="w-16 h-16 bg-linear-to-br from-brand-primary to-brand-secondary rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg"
+                    >
+                      <i class="pi pi-globe text-3xl text-white" style="font-size: 1.25rem"></i>
+                    </div>
+
+                    <h4 class="font-bold text-gray-900 dark:text-white mb-3 text-lg">
+                      {{ 'partners.nebras.connect.heading' | translate }}
+                    </h4>
+
+                    <div class="flex justify-center gap-4">
+                      <a
+                        href="https://web.facebook.com/nebrastech"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="inline-flex items-center gap-2 px-6 py-3 bg-brand-primary dark:bg-brand-primary dark:hover:-translate-y-1 text-white rounded-lg transition-colors no-underline shadow-lg"
+                      >
+                        <i class="pi pi-facebook"></i>
+
+                        <span class="font-semibold">{{
+                          'partners.nebras.connect.facebook' | translate
+                        }}</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="py-16 bg-linear-to-br from-[#0a1628] via-[#162952] to-[#1e3a6d] text-white relative overflow-hidden"
+  >
+    <div
+      class="absolute inset-0 opacity-[0.03]"
+      style="
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+
+        background-size: 50px 50px;
+      "
+    ></div>
+
+    <div class="section-content-wrapper text-center relative z-10" appScrollReveal>
+      <div>
+        <h2 class="text-4xl font-bold mb-4">{{ 'partners.cta.heading' | translate }}</h2>
+
+        <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          {{ 'partners.cta.description' | translate }}
+        </p>
+
+        <button
+          routerLink="/contact"
+          class="px-8 py-3 bg-white text-[#0a1628] hover:bg-gray-100 border-none shadow-lg rounded-md inline-flex items-center gap-2 transition-colors cursor-pointer"
+        >
+          <i class="pi pi-envelope"></i>
+
+          <span>{{ 'partners.cta.button' | translate }}</span>
+        </button>
+      </div>
+    </div>
+  </section>
+</section>

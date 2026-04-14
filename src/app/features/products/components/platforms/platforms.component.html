@@ -1,0 +1,27 @@
+<section class="py-20">
+  <div class="section-content-wrapper">
+    <div class="text-center mb-16" appScrollReveal>
+      <h2 class="text-4xl font-bold text-slate-900 dark:text-white mb-4 tracking-tight">
+        {{ 'PRODUCTS.PLATFORMS.TITLE' | translate }}
+      </h2>
+      <p class="text-xl text-slate-600 dark:text-slate-400 font-light">
+        {{ 'PRODUCTS.PLATFORMS.SUBTITLE' | translate }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-4xl mx-auto">
+      @for (platform of platforms(); track platform.title) {
+        <app-info-card
+          appScrollReveal
+          [style.transition-delay]="$index * 200 + 'ms'"
+          [icon]="platform.icon"
+          [title]="platform.title"
+        >
+          <p class="text-slate-500 dark:text-slate-400">
+            {{ platform.subtitle | translate }}
+          </p>
+        </app-info-card>
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<section class="py-20">
+  <div class="section-content-wrapper">
+    <h2 class="text-4xl font-bold text-center mb-16 dark:text-white" appScrollReveal>
+      {{ 'ABOUT.JOURNEY.TITLE' | translate }}
+    </h2>
+    <div class="max-w-4xl mx-auto">
+      <p-timeline [value]="milestones()" align="alternate">
+        <ng-template pTemplate="marker" let-item>
+          <span
+            appScrollReveal
+            class="flex w-10 h-10 items-center justify-center text-white rounded-full z-10 shadow-md bg-[#2E5AAC]"
+          >
+            <i class="pi pi-check font-bold"></i>
+          </span>
+        </ng-template>
+        <ng-template pTemplate="content" let-item>
+          <div class="pb-8" appScrollReveal [hiddenClasses]="['opacity-0', 'translate-y-8']">
+            <div class="flex flex-col mb-8">
+              <span class="text-2xl font-black text-[#2E5AAC] dark:text-[#4A90E2]">{{
+                item.year
+              }}</span>
+              <span class="text-gray-900 dark:text-gray-300 mt-1">{{
+                item.event | translate
+              }}</span>
+            </div>
+          </div>
+        </ng-template>
+      </p-timeline>
+    </div>
+  </div>
+</section>

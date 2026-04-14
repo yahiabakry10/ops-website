@@ -1,0 +1,104 @@
+<div class="min-h-screen bg-gray-50 flex items-center justify-center py-20">
+  <div class="section-content-wrapper">
+    <div class="text-center max-w-4xl mx-auto">
+      <!-- 404 Large Number -->
+      <div class="mb-8">
+        <h1
+          class="text-[180px] md:text-[250px] font-bold bg-linear-to-r from-[#2E5AAC] to-[#4A90E2] bg-clip-text text-transparent leading-none"
+        >
+          {{ 'NOT_FOUND.CODE' | translate }}
+        </h1>
+      </div>
+
+      <!-- Error Message -->
+      <div class="mb-12">
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          {{ 'NOT_FOUND.TITLE' | translate }}
+        </h2>
+        <p class="text-xl text-gray-600 mb-2">{{ 'NOT_FOUND.MESSAGE' | translate }}</p>
+        <p class="text-lg text-gray-500">
+          {{ 'NOT_FOUND.SUB_MESSAGE' | translate }}
+        </p>
+      </div>
+
+      <!-- Illustration -->
+      <div class="mb-12">
+        <div
+          class="w-48 h-48 mx-auto bg-linear-to-br from-[#2E5AAC]/10 to-[#4A90E2]/10 rounded-full flex items-center justify-center"
+        >
+          <i class="pi pi-exclamation-triangle text-8xl text-[#2E5AAC]"></i>
+        </div>
+      </div>
+
+      <!-- Primary Actions -->
+      <div class="flex flex-wrap gap-4 justify-center mb-16">
+        <a
+          routerLink="/"
+          class="inline-flex items-center gap-2 px-8 py-3 rounded-md text-lg font-semibold text-white bg-linear-to-r from-[#2E5AAC] to-[#4A90E2] hover:opacity-90 transition-opacity duration-200"
+        >
+          <i class="pi pi-home"></i>
+          {{ 'NOT_FOUND.ACTIONS.HOME' | translate }}
+        </a>
+
+        <button
+          type="button"
+          (click)="goBack()"
+          class="inline-flex items-center gap-2 px-8 py-3 rounded-md text-lg font-semibold border border-[#2E5AAC] text-[#2E5AAC] bg-transparent hover:bg-[#2E5AAC]/5 transition-colors duration-200"
+        >
+          <i class="pi pi-arrow-left"></i>
+          {{ 'NOT_FOUND.ACTIONS.BACK' | translate }}
+        </button>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-8">
+          {{ 'NOT_FOUND.QUICK_LINKS_TITLE' | translate }}
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          @for (link of quickLinks(); track link.path) {
+            <a [routerLink]="link.path" class="no-underline">
+              <div
+                class="bg-white rounded-lg shadow-md hover:shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer h-full border-t-4 border-[#2E5AAC] p-6"
+              >
+                <div class="text-center py-4">
+                  <div
+                    class="w-16 h-16 bg-linear-to-br from-[#2E5AAC] to-[#4A90E2] rounded-full flex items-center justify-center mx-auto mb-4"
+                  >
+                    <i [class]="`pi ${link.icon} text-3xl text-white`"></i>
+                  </div>
+                  <h4 class="font-semibold text-gray-900 mb-2 text-lg">
+                    {{ link.label | translate }}
+                  </h4>
+                  <p class="text-gray-600 text-sm">{{ link.description | translate }}</p>
+                </div>
+              </div>
+            </a>
+          }
+        </div>
+      </div>
+
+      <!-- Help Section -->
+      <div class="mt-16">
+        <div class="bg-linear-to-r from-[#2E5AAC] to-[#4A90E2] text-white rounded-lg shadow-xl p-8">
+          <div class="py-8">
+            <i class="pi pi-question-circle text-5xl mb-4 block"></i>
+            <h3 class="text-2xl font-bold mb-4">
+              {{ 'NOT_FOUND.HELP.TITLE' | translate }}
+            </h3>
+            <p class="text-lg opacity-90 mb-6">
+              {{ 'NOT_FOUND.HELP.DESC' | translate }}
+            </p>
+            <a
+              routerLink="/contact"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-md font-semibold bg-white text-[#2E5AAC] hover:bg-gray-100 transition-colors duration-200"
+            >
+              <i class="pi pi-headphones"></i>
+              {{ 'NOT_FOUND.HELP.BUTTON' | translate }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

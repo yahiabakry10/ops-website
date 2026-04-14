@@ -1,0 +1,143 @@
+/* Specific Dark Mode overrides for Form Inputs */
+:host-context(.dark) ::ng-deep .p-inputtext,
+:host-context(.dark) ::ng-deep .p-inputtextarea,
+:host-context(.dark) ::ng-deep .p-textarea {
+  background-color: rgba(30, 41, 59, 0.5);
+  border-color: #334155;
+  color: #f8fafc;
+}
+
+:host-context(.dark) ::ng-deep .p-inputtext:focus,
+:host-context(.dark) ::ng-deep .p-textarea:enabled:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+  outline: none;
+}
+
+:host-context(.dark) ::ng-deep .p-inputtext:enabled:hover {
+  border-color: #475569;
+}
+
+:host-context(.dark) ::ng-deep .p-card {
+  background-color: rgba(30, 41, 59, 0.5);
+  border: 1px solid rgba(51, 65, 85, 0.5);
+  backdrop-filter: blur(12px);
+  color: #f8fafc;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+}
+
+/* Specific Light Mode overrides for Form Inputs */
+::ng-deep .p-inputtext,
+::ng-deep .p-inputtextarea,
+::ng-deep .p-textarea {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-color: #e2e8f0;
+  color: #0f172a;
+  transition: all 0.2s ease-in-out;
+}
+
+::ng-deep .p-inputtext:enabled:hover,
+::ng-deep .p-textarea:enabled:hover {
+  border-color: #cbd5e1;
+}
+
+::ng-deep .p-inputtext:enabled:focus,
+::ng-deep .p-textarea:enabled:focus {
+  background-color: #ffffff;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+  outline: none;
+}
+
+::ng-deep .p-inputtext::placeholder {
+  color: #94a3b8;
+}
+
+::ng-deep .p-card {
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Hover effects for social links */
+a {
+  transition: transform 0.2s ease;
+}
+
+a:hover {
+  transform: translateY(-3px);
+}
+
+/* Animations */
+
+/* WhatsApp floating animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Slow ping animation for outer ring */
+@keyframes ping-slow {
+  0% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  75%,
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Slower ping for second ring */
+@keyframes ping-slower {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  75%,
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
+}
+
+/* Pulse and scale for notification badge */
+@keyframes pulse-scale {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+}
+
+.whatsapp-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-ping-slow {
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-ping-slower {
+  animation: ping-slower 2s cubic-bezier(0, 0, 0.2, 1) infinite 0.5s;
+}
+
+.animate-pulse-scale {
+  animation: pulse-scale 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Smooth shadow transition */
+.whatsapp-float:hover {
+  filter: brightness(1.1);
+}
