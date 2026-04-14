@@ -37,7 +37,7 @@
   }
 
   .premium-card {
-    @apply relative h-full overflow-hidden rounded-2xl bg-gradient-to-br from-white to-gray-50 dark:from-slate-900 dark:to-slate-800 p-8 shadow-lg ring-1 ring-gray-900/5 dark:ring-white/5 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-primary/10 dark:hover:shadow-brand-secondary/20 hover:-translate-y-1;
+    @apply relative h-full overflow-hidden rounded-2xl bg-linear-to-br from-white to-gray-50 dark:from-slate-900 dark:to-slate-800 p-8 shadow-lg ring-1 ring-gray-900/5 dark:ring-white/5 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-primary/10 dark:hover:shadow-brand-secondary/20 hover:-translate-y-1;
   }
 }
 
@@ -47,4 +47,3 @@ body {
   overflow-x: hidden;
   font-family: 'Almarai', sans-serif;
 }
-
