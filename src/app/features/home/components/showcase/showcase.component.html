@@ -60,17 +60,18 @@
 
     @if (isReady()) {
       <div class="swiper-viewport">
-        <swiper-container #swiperRef init="false" class="main-showcase-swiper">
+        <swiper-container #swiperRef init="false" lazy="true" class="main-showcase-swiper">
           @for (img of showCaseView() === 'mobile' ? mobileImages() : webImages(); track img.src) {
             <swiper-slide
-              [style.width]="showCaseView() === 'mobile' ? '280px' : '850px'"
+              [class.mobile-slide]="showCaseView() === 'mobile'"
+              [class.web-slide]="showCaseView() === 'web'"
               class="py-12"
             >
               <div class="device-wrapper group">
                 <div
-                  [ngClass]="
+                  [class]="
                     showCaseView() === 'mobile'
-                      ? 'aspect-[9/18.5] rounded-[2.5rem] border-[8px] border-slate-950 dark:border-slate-800'
+                      ? 'aspect-9/18.5 rounded-[2.5rem] border-8 border-slate-950 dark:border-slate-800'
                       : 'aspect-video rounded-xl border-[6px] border-slate-950 dark:border-slate-800'
                   "
                   class="relative overflow-hidden bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500"
@@ -89,6 +90,7 @@
                     [src]="img.src"
                     [alt]="img.alt"
                     class="w-full h-full object-cover object-top"
+                    loading="lazy"
                   />
                   <div
                     class="absolute inset-0 bg-linear-to-tr from-white/10 via-transparent to-black/5 pointer-events-none"

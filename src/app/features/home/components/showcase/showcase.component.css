@@ -38,10 +38,20 @@ swiper-container::part(bullet-active) {
   background: var(--brand-primary);
 }
 
+/* Responsive Slide Widths */
+.mobile-slide {
+  width: 280px;
+}
+
+.web-slide {
+  width: 850px;
+  max-width: 90vw; /* Scales down on tablets/mobile */
+}
+
 /* Adjustments for Mobile Viewport */
 @media (max-width: 768px) {
-  swiper-slide {
-    width: 240px !important; /* Force width for coverflow visibility */
+  .mobile-slide {
+    width: 240px !important;
   }
 }
 
@@ -52,10 +62,24 @@ swiper-container::part(bullet-active) {
   display: flex;
   justify-content: center;
   align-items: center;
+  transform: translateZ(0); /* Triggers GPU rendering */
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 
 img {
   display: block;
   user-select: none;
   -webkit-user-drag: none;
+
+  /* Use smooth scaling for photos/screenshots */
+  image-rendering: auto;
+
+  /* Ensure the image doesn't look squashed */
+  object-fit: cover;
+  object-position: top;
+
+  /* Prevent blurring during 3D transform animations */
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }

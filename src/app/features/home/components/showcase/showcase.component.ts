@@ -35,20 +35,20 @@ export class ShowcaseComponent {
   readonly isReady = signal<boolean>(false);
 
   readonly mobileImages = signal<ShowcaseImage[]>([
-    { src: '/images/Appointments.png', alt: 'App Screen 1' },
-    { src: '/images/ClinicsDoctors.png', alt: 'App Screen 2' },
-    { src: '/images/Consultation.png', alt: 'App Screen 3' },
-    { src: '/images/Follow-up.png', alt: 'App Screen 4' },
-    { src: '/images/InsuranceData.png', alt: 'App Screen 5' },
-    { src: '/images/NextVisits.png', alt: 'App Screen 6' },
-    { src: '/images/Payments.png', alt: 'App Screen 7' },
-    { src: '/images/ReservationConfirmation1.png', alt: 'App Screen 8' },
-    { src: '/images/ReservationConfirmation.png', alt: 'App Screen 9' },
-    { src: '/images/Notification.png', alt: 'App Screen 10' },
-    { src: '/images/Registration.png', alt: 'App Screen 11' },
-    { src: '/images/Visits.png', alt: 'App Screen 12' },
-    { src: '/images/Settings.png', alt: 'App Screen 13' },
-    { src: '/images/ReservationSteps.png', alt: 'App Screen 14' },
+    { src: '/images/Appointments.webp', alt: 'App Screen 1' },
+    { src: '/images/ClinicsDoctors.webp', alt: 'App Screen 2' },
+    { src: '/images/Consultation.webp', alt: 'App Screen 3' },
+    { src: '/images/Follow-up.webp', alt: 'App Screen 4' },
+    { src: '/images/InsuranceData.webp', alt: 'App Screen 5' },
+    { src: '/images/NextVisits.webp', alt: 'App Screen 6' },
+    { src: '/images/Payments.webp', alt: 'App Screen 7' },
+    { src: '/images/ReservationConfirmation1.webp', alt: 'App Screen 8' },
+    { src: '/images/ResrvationConfirmation.webp', alt: 'App Screen 9' },
+    { src: '/images/Notification.webp', alt: 'App Screen 10' },
+    { src: '/images/Registration.webp', alt: 'App Screen 11' },
+    { src: '/images/Visits.webp', alt: 'App Screen 12' },
+    { src: '/images/Settings.webp', alt: 'App Screen 13' },
+    { src: '/images/ReservationSteps.webp', alt: 'App Screen 14' },
   ]);
 
   readonly webImages = signal<ShowcaseImage[]>([
@@ -99,10 +99,13 @@ export class ShowcaseComponent {
       slidesPerView: 'auto',
       loop: true,
       speed: 800,
+      lazy: true,
+      watchSlidesProgress: true,
+      preloadImages: false,
       coverflowEffect: {
-        rotate: 35, // Tilted side images
+        rotate: 35,
         stretch: 0,
-        depth: 250, // Pushes side images back
+        depth: 160, // Reduced from 250 to lower GPU strain
         modifier: 1,
         slideShadows: false,
       },
