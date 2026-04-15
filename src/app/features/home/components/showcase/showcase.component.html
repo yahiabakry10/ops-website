@@ -1,0 +1,104 @@
+<section
+  class="relative py-20 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-500"
+>
+  <div class="absolute inset-0 pointer-events-none">
+    <div
+      class="absolute top-0 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full blur-[120px]"
+    ></div>
+    <div
+      class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full blur-[120px]"
+    ></div>
+  </div>
+
+  <div class="section-content-wrapper relative z-10">
+    <div class="text-center mb-12">
+      <div
+        class="inline-block px-4 py-1.5 mb-6 rounded-full bg-brand-primary/10 border border-brand-primary/20"
+      >
+        <span class="text-xs font-bold tracking-widest text-brand-primary uppercase"
+          >Portfolio Showcase</span
+        >
+      </div>
+      <h2 class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight">
+        Our Most Important Work in
+        <span
+          class="text-brand-primary bg-linear-to-r from-brand-primary to-brand-secondary bg-clip-text"
+        >
+          Healthcare Technology</span
+        >
+      </h2>
+    </div>
+
+    <div class="flex justify-center mb-16">
+      <div
+        class="inline-flex p-1.5 bg-slate-100 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-inner"
+      >
+        <button
+          (click)="toggleView('mobile')"
+          [class]="
+            showCaseView() === 'mobile'
+              ? 'bg-brand-primary text-white shadow-lg'
+              : 'text-slate-500 hover:text-brand-primary'
+          "
+          class="flex items-center gap-2 px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300"
+        >
+          <i class="pi pi-mobile"></i> Mobile Apps
+        </button>
+        <button
+          (click)="toggleView('web')"
+          [class]="
+            showCaseView() === 'web'
+              ? 'bg-brand-primary text-white shadow-lg'
+              : 'text-slate-500 hover:text-brand-primary'
+          "
+          class="flex items-center gap-2 px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300"
+        >
+          <i class="pi pi-desktop"></i> Web Dashboards
+        </button>
+      </div>
+    </div>
+
+    @if (isReady()) {
+      <div class="swiper-viewport">
+        <swiper-container #swiperRef init="false" class="main-showcase-swiper">
+          @for (img of showCaseView() === 'mobile' ? mobileImages() : webImages(); track img.src) {
+            <swiper-slide
+              [style.width]="showCaseView() === 'mobile' ? '280px' : '850px'"
+              class="py-12"
+            >
+              <div class="device-wrapper group">
+                <div
+                  [ngClass]="
+                    showCaseView() === 'mobile'
+                      ? 'aspect-[9/18.5] rounded-[2.5rem] border-[8px] border-slate-950 dark:border-slate-800'
+                      : 'aspect-video rounded-xl border-[6px] border-slate-950 dark:border-slate-800'
+                  "
+                  class="relative overflow-hidden bg-white dark:bg-slate-900 shadow-2xl transition-all duration-500"
+                >
+                  @if (showCaseView() === 'web') {
+                    <div
+                      class="bg-slate-100 dark:bg-slate-800 h-7 flex items-center px-4 gap-1.5 border-b border-slate-200 dark:border-slate-700"
+                    >
+                      <div class="w-2 h-2 rounded-full bg-red-400"></div>
+                      <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
+                      <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+                    </div>
+                  }
+
+                  <img
+                    [src]="img.src"
+                    [alt]="img.alt"
+                    class="w-full h-full object-cover object-top"
+                  />
+                  <div
+                    class="absolute inset-0 bg-linear-to-tr from-white/10 via-transparent to-black/5 pointer-events-none"
+                  ></div>
+                </div>
+              </div>
+            </swiper-slide>
+          }
+        </swiper-container>
+      </div>
+    }
+  </div>
+</section>

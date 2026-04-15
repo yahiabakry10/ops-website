@@ -18,15 +18,21 @@ export const routes: Routes = [
     title: 'Our Products — PremiumCare & ERP Systems',
   },
   {
-    path: 'about',
-    loadComponent: () => import('./features/about/about.component').then((m) => m.AboutComponent),
-    title: 'About OPS',
+    path: 'customers',
+    loadComponent: () =>
+      import('./features/customers/customers.component').then((m) => m.CustomersComponent),
+    title: 'OPS Customers',
   },
   {
     path: 'partners',
     loadComponent: () =>
       import('./features/partners/partners.component').then((m) => m.PartnersComponent),
     title: 'OPS Partners',
+  },
+  {
+    path: 'about',
+    loadComponent: () => import('./features/about/about.component').then((m) => m.AboutComponent),
+    title: 'About OPS',
   },
   {
     path: 'contact',

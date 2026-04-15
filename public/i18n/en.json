@@ -66,8 +66,9 @@
     "ITEMS": {
       "HOME": "Home",
       "PRODUCTS": "Products",
-      "ABOUT": "About Us",
+      "CUSTOMERS": "Customers",
       "PARTNERS": "Partners",
+      "ABOUT": "About Us",
       "CONTACT": "Contact"
     },
     "ARIA": {
@@ -85,8 +86,9 @@
     "LINKS": {
       "HOME": "Home",
       "PRODUCTS": "Products",
-      "ABOUT": "About Us",
+      "CUSTOMERS": "Customers",
       "PARTNERS": "Partners",
+      "ABOUT": "About Us",
       "CONTACT": "Contact"
     }
   },
@@ -234,6 +236,39 @@
     }
   },
 
+  "CUSTOMERS": {
+    "TITLE": "Our Trusted Customers",
+    "SUBTITLE": "Leading healthcare institutions across the region",
+    "CAT_HOSPITALS": "Hospitals",
+    "CAT_MEDICAL": "Medical Centers & Polyclinics",
+    "H1": "Military Production Hospital (270 Beds) – Cairo",
+    "H2": "Rabia Hospital – Riyadh – Saudi Arabia",
+    "H3": "Islamic Hospital - Cairo",
+    "H4": "Fouad Hospital – Cairo",
+    "H5": "Al-Jazeera International Hospital (SALLAB) - Mansoura",
+    "H6": "Nile Hospital – Minya",
+    "H7": "AlNahar Hospital – Alex",
+    "H8": "AlRazy Hospital – Monoufia",
+    "H9": "Lymar Hospital (Pediatrics) - Demiatta",
+    "H10": "Tiba Hospital – Alex",
+    "H11": "Dr. Ibrahim Nada Hospital - Alex",
+    "H12": "Badrawy Hospital – Alex",
+    "H13": "Sidi Beshr Royal Hospital – Alex",
+    "H14": "Fargallah Charitable Hospital – Alex",
+    "H15": "Synapse Hospital (Pediatrics) – Alex",
+    "M1": "Saint Mary Medical Center - Cairo – ElKanater",
+    "M2": "Enaya Medical Centers - Giza – Sheik Zayed",
+    "M3": "Fouad Orthopedic Medical Center - 10th of Ramadan",
+    "M4": "El-Sewedy Medical Group",
+    "M5": "Nile Specialized Clinics - Tanta",
+    "M6": "AlTabib AlAraby Medical Center – Monoufia",
+    "M7": "AlYousr Obstetrics and Gynecology Medical Center - 10th of Ramadan",
+    "M8": "Eiadty Medical Center – Cairo",
+    "M9": "Al-Mahaba Medical Center (Dialysis) – Cairo",
+    "M10": "Aldawa Medical Center – Cairo",
+    "M11": "Dr. Tarek Omar Clinics – Alex"
+  },
+
   "ABOUT": {
     "HERO": {
       "TITLE": "About OPS",
@@ -296,38 +331,6 @@
         "T": "Balance",
         "D": "Achieving harmony between quality, innovation, and customer satisfaction."
       }
-    },
-    "CUSTOMERS": {
-      "TITLE": "Our Trusted Customers",
-      "SUBTITLE": "Leading healthcare institutions across the region",
-      "CAT_HOSPITALS": "Hospitals",
-      "CAT_MEDICAL": "Medical Centers & Polyclinics",
-      "H1": "Military Production Hospital (270 Beds) – Cairo",
-      "H2": "Rabia Hospital – Riyadh – Saudi Arabia",
-      "H3": "Islamic Hospital - Cairo",
-      "H4": "Fouad Hospital – Cairo",
-      "H5": "Al-Jazeera International Hospital (SALLAB) - Mansoura",
-      "H6": "Nile Hospital – Minya",
-      "H7": "AlNahar Hospital – Alex",
-      "H8": "AlRazy Hospital – Monoufia",
-      "H9": "Lymar Hospital (Pediatrics) - Demiatta",
-      "H10": "Tiba Hospital – Alex",
-      "H11": "Dr. Ibrahim Nada Hospital - Alex",
-      "H12": "Badrawy Hospital – Alex",
-      "H13": "Sidi Beshr Royal Hospital – Alex",
-      "H14": "Fargallah Charitable Hospital – Alex",
-      "H15": "Synapse Hospital (Pediatrics) – Alex",
-      "M1": "Saint Mary Medical Center - Cairo – ElKanater",
-      "M2": "Enaya Medical Centers - Giza – Sheik Zayed",
-      "M3": "Fouad Orthopedic Medical Center - 10th of Ramadan",
-      "M4": "El-Sewedy Medical Group",
-      "M5": "Nile Specialized Clinics - Tanta",
-      "M6": "AlTabib AlAraby Medical Center – Monoufia",
-      "M7": "AlYousr Obstetrics and Gynecology Medical Center - 10th of Ramadan",
-      "M8": "Eiadty Medical Center – Cairo",
-      "M9": "Al-Mahaba Medical Center (Dialysis) – Cairo",
-      "M10": "Aldawa Medical Center – Cairo",
-      "M11": "Dr. Tarek Omar Clinics – Alex"
     },
     "ACTIVITIES": {
       "TITLE": "Company Activities",

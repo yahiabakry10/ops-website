@@ -1,14 +1,13 @@
-<section id="customers" class="py-20">
-  <div class="section-content-wrapper">
-    <div class="text-center mb-16" appScrollReveal>
-      <h2 class="text-4xl font-bold mb-4 dark:text-white">
-        {{ 'ABOUT.CUSTOMERS.TITLE' | translate }}
-      </h2>
-      <p class="text-xl text-gray-600 dark:text-gray-400">
-        {{ 'ABOUT.CUSTOMERS.SUBTITLE' | translate }}
-      </p>
-    </div>
-
+<section class="overflow-hidden">
+  <app-main-header appScrollReveal>
+    <h1 class="hero-title">
+      {{ 'CUSTOMERS.TITLE' | translate }}
+    </h1>
+    <p class="hero-subtitle">
+      {{ 'CUSTOMERS.SUBTITLE' | translate }}
+    </p>
+  </app-main-header>
+  <div class="section-content-wrapper pt-12">
     @for (cat of customers(); track cat.category) {
       <div class="mb-16">
         <h3

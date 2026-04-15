@@ -4,6 +4,7 @@ import { HeroComponent } from './components/hero/hero.component';
 import { ServicesComponent } from './components/services/services.component';
 import { ClientsComponent } from './components/clients/clients.component';
 import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
+import { ShowcaseComponent } from './components/showcase/showcase.component';
 
 @Component({
   selector: 'app-home',
@@ -13,6 +14,7 @@ import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.dir
     CtaComponent,
     ClientsComponent,
     ScrollRevealDirective,
+    ShowcaseComponent,
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',

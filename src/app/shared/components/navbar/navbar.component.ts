@@ -49,11 +49,11 @@ export class NavbarComponent implements AfterViewInit, OnDestroy {
   readonly isMobileMenuOpen = signal<boolean>(false);
 
   // --- Nav Items ---
-
   readonly navItems: NavItem[] = [
     { key: 'PRODUCTS', routerLink: '/products' },
-    { key: 'ABOUT', routerLink: '/about' },
+    { key: 'CUSTOMERS', routerLink: '/customers' },
     { key: 'PARTNERS', routerLink: '/partners' },
+    { key: 'ABOUT', routerLink: '/about' },
     { key: 'CONTACT', routerLink: '/contact' },
   ];
 
