@@ -129,7 +129,7 @@
                   'w-12 h-12 md:w-14 md:h-14 bg-white/20 rounded-xl flex items-center justify-center mb-4 md:mb-6 shadow-lg text-white'
                 "
               >
-                <i [class]="'pi text-xl md:text-2xl pi-' + item.icon"></i>
+                <i [class]="`pi pi-${item.icon}`" style="font-size: 1.25rem"></i>
               </div>
               <h4 class="text-white font-bold text-xl md:text-2xl mb-2 md:mb-3">
                 {{ item.titleKey | translate }}
