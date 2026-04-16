@@ -3,49 +3,116 @@ swiper-container {
   display: block; /* Custom elements are inline by default */
   width: 100%;
   min-height: 400px;
-  padding-top: 20px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+  padding-bottom: 120px; /* Increased from 80px for more spacing */
 }
 
 /* 3D Visual Effects */
 swiper-slide {
   transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: blur(2px) brightness(0.8);
-  transform: scale(0.85); /* Side slides are smaller */
+  opacity: 0.5;
+  transform: scale(0.85);
+  filter: grayscale(30%) brightness(0.8);
 }
 
 swiper-slide.swiper-slide-active {
-  filter: blur(0) brightness(1);
-  transform: scale(1.1); /* Center slide is much larger */
-  z-index: 50;
-}
-
-/* Pagination Dots */
-swiper-container::part(pagination) {
-  bottom: 10px;
-}
-
-swiper-container::part(bullet) {
-  background: var(--brand-primary);
-  opacity: 0.2;
-  transition: all 0.3s ease;
-}
-
-swiper-container::part(bullet-active) {
   opacity: 1;
-  width: 30px;
-  border-radius: 10px;
+  filter: grayscale(0%) brightness(1.1);
+  transform: scale(1.1) !important;
+  z-index: 50;
+  filter: drop-shadow(0 0 30px rgba(46, 90, 172, 0.25));
+}
+
+/* 1. Reset Swiper Internal UI */
+swiper-container::part(button-prev),
+swiper-container::part(button-next) {
+  display: none !important;
+}
+
+/* 2. Custom Navigation Buttons (Outside Container) */
+.custom-nav-btn {
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 100;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  color: var(--brand-primary);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0;
+}
+
+.custom-nav-btn svg {
+  width: 1.5rem; /* Balanced size for the icon */
+  height: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.prev-btn {
+  left: 40px;
+}
+
+.next-btn {
+  right: 40px;
+}
+
+.custom-nav-btn:hover {
   background: var(--brand-primary);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 8px 25px rgba(46, 90, 172, 0.3);
+}
+
+.custom-nav-btn:hover svg {
+  transform: scale(1.1);
+}
+
+/* Responsive Navigation */
+@media (max-width: 1280px) {
+  .prev-btn {
+    left: 20px;
+  }
+  .next-btn {
+    right: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-nav-btn {
+    width: 44px;
+    height: 44px;
+  }
+
+  .custom-nav-btn svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+  .prev-btn {
+    left: 10px;
+  }
+  .next-btn {
+    right: 10px;
+  }
 }
 
 /* Responsive Slide Widths */
 .mobile-slide {
-  width: 280px;
+  width: 250px;
 }
 
 .web-slide {
-  width: 850px;
-  max-width: 90vw; /* Scales down on tablets/mobile */
+  width: 720px;
+  max-width: 85vw;
 }
 
 /* Adjustments for Mobile Viewport */
@@ -56,30 +123,25 @@ swiper-container::part(bullet-active) {
 }
 
 .device-wrapper {
-  perspective: 1000px;
+  transform-style: preserve-3d;
   width: 100%;
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: translateZ(0); /* Triggers GPU rendering */
-  backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
 }
 
 img {
   display: block;
+  width: 100%;
+  height: 100%;
   user-select: none;
   -webkit-user-drag: none;
 
   /* Use smooth scaling for photos/screenshots */
   image-rendering: auto;
 
-  /* Ensure the image doesn't look squashed */
+  /* Return to full-frame fit */
   object-fit: cover;
   object-position: top;
-
-  /* Prevent blurring during 3D transform animations */
-  transform: translateZ(0);
-  backface-visibility: hidden;
 }
