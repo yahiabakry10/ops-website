@@ -1,147 +1,161 @@
-/* Container sizing */
 swiper-container {
-  display: block; /* Custom elements are inline by default */
+  display: block;
   width: 100%;
-  min-height: 400px;
-  padding-top: 40px;
-  padding-bottom: 120px; /* Increased from 80px for more spacing */
+  min-height: 550px;
+  overflow: visible;
 }
 
-/* 3D Visual Effects */
+/* Base Slide Styles */
 swiper-slide {
-  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  opacity: 0.5;
-  transform: scale(0.85);
-  filter: grayscale(30%) brightness(0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+  opacity: 1 !important;
+}
+
+swiper-slide:not(.swiper-slide-active) {
+  transform: scale(0.8);
 }
 
 swiper-slide.swiper-slide-active {
-  opacity: 1;
-  filter: grayscale(0%) brightness(1.1);
-  transform: scale(1.1) !important;
-  z-index: 50;
-  filter: drop-shadow(0 0 30px rgba(46, 90, 172, 0.25));
-}
-
-/* 1. Reset Swiper Internal UI */
-swiper-container::part(button-prev),
-swiper-container::part(button-next) {
-  display: none !important;
-}
-
-/* 2. Custom Navigation Buttons (Outside Container) */
-.custom-nav-btn {
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(8px);
-  border-radius: 50%;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
   z-index: 100;
-  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  color: var(--brand-primary);
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  padding: 0;
+  transform: scale(1.05);
 }
 
-.custom-nav-btn svg {
-  width: 1.5rem; /* Balanced size for the icon */
-  height: 1.5rem;
-  transition: transform 0.3s ease;
+/* Device Wrapper & The Webstdy Blackout Overlay */
+.device-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  overflow: hidden;
+}
+
+/* BLACKOUT OVERLAY - The "Webstdy" Look */
+.device-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: #000;
+  z-index: 50;
+  pointer-events: none;
+  opacity: 0.5; /* Makes inactive slides dark */
+  transition: opacity 0.6s ease;
+}
+
+swiper-slide.swiper-slide-active .device-wrapper::before {
+  opacity: 0; /* Fully clear for center slide */
+}
+
+/* Floor Glow */
+.device-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 40px;
+  background: radial-gradient(ellipse, rgba(46, 90, 172, 0.3) 0%, transparent 75%);
+  filter: blur(20px);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+
+swiper-slide.swiper-slide-active .device-wrapper::after {
+  opacity: 1;
+}
+
+/* Frames */
+.phone-frame {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 9/18.5;
+  border: 8px solid #0f172a;
+  border-radius: 3rem;
+  background: #0f172a;
+}
+
+.browser-frame {
+  width: 100%;
+  aspect-ratio: 16/10; /* Better ratio for dashboard visibility */
+  border: 6px solid #0f172a;
+  border-radius: 1rem;
+  background: #0f172a;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-screen,
+.browser-content {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+}
+
+.browser-chrome {
+  height: 38px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+/* Responsive Slide Widths */
+.mobile-slide {
+  width: 280px;
+}
+.web-slide {
+  width: 85vw;
+  max-width: 900px;
+}
+
+@media (min-width: 768px) {
+  .mobile-slide {
+    width: 300px;
+  }
+}
+
+/* Custom Nav Buttons */
+
+.custom-nav-btn {
+  display: none;
 }
 
 .prev-btn {
   left: 40px;
 }
-
 .next-btn {
   right: 40px;
 }
 
-.custom-nav-btn:hover {
-  background: var(--brand-primary);
-  color: white;
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 8px 25px rgba(46, 90, 172, 0.3);
-}
-
-.custom-nav-btn:hover svg {
-  transform: scale(1.1);
-}
-
-/* Responsive Navigation */
-@media (max-width: 1280px) {
-  .prev-btn {
-    left: 20px;
-  }
-  .next-btn {
-    right: 20px;
-  }
-}
-
-@media (max-width: 768px) {
+@media (min-width: 1024px) {
   .custom-nav-btn {
-    width: 44px;
-    height: 44px;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    color: #2e5aac;
   }
-
-  .custom-nav-btn svg {
-    width: 1.2rem;
-    height: 1.2rem;
-  }
-
-  .prev-btn {
-    left: 10px;
-  }
-  .next-btn {
-    right: 10px;
-  }
-}
-
-/* Responsive Slide Widths */
-.mobile-slide {
-  width: 250px;
-}
-
-.web-slide {
-  width: 720px;
-  max-width: 85vw;
-}
-
-/* Adjustments for Mobile Viewport */
-@media (max-width: 768px) {
-  .mobile-slide {
-    width: 240px !important;
-  }
-}
-
-.device-wrapper {
-  transform-style: preserve-3d;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  user-select: none;
-  -webkit-user-drag: none;
-
-  /* Use smooth scaling for photos/screenshots */
-  image-rendering: auto;
-
-  /* Return to full-frame fit */
-  object-fit: cover;
-  object-position: top;
 }

@@ -1,119 +1,76 @@
 <section
-  class="relative py-20 overflow-hidden bg-white dark:bg-slate-950 transition-colors duration-500"
+  class="relative py-24 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden"
 >
-  <div class="absolute inset-0 pointer-events-none">
-    <div
-      class="absolute top-0 left-1/4 w-96 h-96 bg-brand-primary/10 rounded-full blur-[120px]"
-    ></div>
-    <div
-      class="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-secondary/10 rounded-full blur-[120px]"
-    ></div>
-  </div>
+  <div class="max-w-7xl mx-auto px-4 text-center mb-16 relative z-10">
+    <h2 class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight mb-12">
+      Our Most Important Work in
+      <span class="text-brand-primary">Healthcare Technology</span>
+    </h2>
 
-  <div class="section-content-wrapper relative z-10">
-    <div class="text-center mb-12">
-      <h2 class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight">
-        Our Most Important Work in
-        <span
-          class="text-brand-primary bg-linear-to-r from-brand-primary to-brand-secondary bg-clip-text"
-        >
-          Healthcare Technology</span
-        >
-      </h2>
-    </div>
-
-    <div class="flex justify-center px-4 mb-16">
+    <div class="flex justify-center mb-16">
       <div
-        class="flex w-full max-w-sm md:w-auto p-1.5 bg-slate-100 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-inner"
+        class="inline-flex p-1.5 bg-slate-100 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-inner"
       >
         <button
           (click)="toggleView('mobile')"
           [class]="
-            showCaseView() === 'mobile'
-              ? 'bg-brand-primary text-white shadow-lg'
-              : 'text-slate-500 hover:text-brand-primary'
+            showCaseView() === 'mobile' ? 'bg-brand-primary text-white shadow-lg' : 'text-slate-500'
           "
-          class="flex flex-1 md:flex-none justify-center items-center gap-2 px-4 md:px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300"
+          class="px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300"
         >
-          <i class="pi pi-mobile"></i> Mobile Apps
+          Mobile Apps
         </button>
         <button
           (click)="toggleView('web')"
           [class]="
-            showCaseView() === 'web'
-              ? 'bg-brand-primary text-white shadow-lg'
-              : 'text-slate-500 hover:text-brand-primary'
+            showCaseView() === 'web' ? 'bg-brand-primary text-white shadow-lg' : 'text-slate-500'
           "
-          class="flex flex-1 md:flex-none justify-center items-center gap-2 px-4 md:px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300"
+          class="px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300"
         >
-          <i class="pi pi-desktop"></i> Web Dashboards
+          Web Dashboards
         </button>
       </div>
     </div>
 
     @if (isReady()) {
-      <div class="swiper-viewport relative">
-        <swiper-container #swiperRef init="false" lazy="true" class="main-showcase-swiper">
+      <div class="relative w-full">
+        <swiper-container #swiperRef init="false">
           @for (img of showCaseView() === 'mobile' ? mobileImages() : webImages(); track img.src) {
             <swiper-slide
               [class.mobile-slide]="showCaseView() === 'mobile'"
               [class.web-slide]="showCaseView() === 'web'"
               class="py-12"
             >
-              <div class="device-wrapper group">
-                <div
-                  [class]="
-                    showCaseView() === 'mobile'
-                      ? 'aspect-9/18.5 rounded-[2.5rem] border-8 border-slate-950 dark:border-slate-800'
-                      : 'aspect-video rounded-xl border-[6px] border-slate-950 dark:border-slate-800 shadow-2xl overflow-hidden'
-                  "
-                  class="relative overflow-hidden transition-all duration-500"
-                >
-                  @if (showCaseView() === 'web') {
-                    <div
-                      class="bg-slate-100 dark:bg-slate-800 h-7 flex items-center px-4 gap-1.5 border-b border-slate-200 dark:border-slate-700"
-                    >
-                      <div class="w-2 h-2 rounded-full bg-red-400"></div>
-                      <div class="w-2 h-2 rounded-full bg-yellow-400"></div>
-                      <div class="w-2 h-2 rounded-full bg-emerald-400"></div>
+              <div
+                class="device-wrapper"
+                [class.phone-frame]="showCaseView() === 'mobile'"
+                [class.browser-frame]="showCaseView() === 'web'"
+              >
+                @if (showCaseView() === 'mobile') {
+                  <div class="phone-screen">
+                    <div class="dynamic-island"></div>
+                    <img [src]="img.src" [alt]="img.alt" loading="eager" />
+                  </div>
+                } @else {
+                  <div class="browser-chrome">
+                    <div class="flex gap-2 me-4">
+                      <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+                      <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+                      <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                     </div>
-                  }
-
-                  <img [src]="img.src" [alt]="img.alt" class="w-full h-full" />
-                  <div
-                    class="absolute inset-0 bg-linear-to-tr from-white/10 via-transparent to-black/5 pointer-events-none"
-                  ></div>
-                </div>
+                    <div class="flex-1 h-5 bg-slate-200 dark:bg-slate-800 rounded-md"></div>
+                  </div>
+                  <div class="browser-content flex-1 relative">
+                    <img [src]="img.src" [alt]="img.alt" loading="eager" />
+                  </div>
+                }
               </div>
             </swiper-slide>
           }
         </swiper-container>
 
-        <!-- Custom Navigation Buttons (Outside Container) -->
-        <button class="custom-nav-btn prev-btn">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="15 18 9 12 15 6"></polyline>
-          </svg>
-        </button>
-        <button class="custom-nav-btn next-btn">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <polyline points="9 18 15 12 9 6"></polyline>
-          </svg>
-        </button>
+        <button class="custom-nav-btn prev-btn"><i class="pi pi-chevron-left text-xl"></i></button>
+        <button class="custom-nav-btn next-btn"><i class="pi pi-chevron-right text-xl"></i></button>
       </div>
     }
   </div>
