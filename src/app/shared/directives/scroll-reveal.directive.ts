@@ -18,6 +18,7 @@ export class ScrollRevealDirective implements OnInit {
   private readonly renderer = inject(Renderer2);
   private readonly destroyRef = inject(DestroyRef);
   private readonly platformId = inject(PLATFORM_ID);
+  private observer: IntersectionObserver | null = null;
 
   // Default to a smooth slide-up effect, easily overridden via Inputs
   @Input() hiddenClasses: string[] = ['opacity-0', 'translate-y-12'];
@@ -26,20 +27,27 @@ export class ScrollRevealDirective implements OnInit {
   @Input() threshold: number = 0.1;
 
   ngOnInit(): void {
-    this.initializeStyles();
-    if (isPlatformBrowser(this.platformId)) {
-      this.setupIntersectionObserver();
-    }
+    this.reset();
   }
 
-  /**
-   * Sets the initial "invisible" state of the element
-   */
-  private initializeStyles(): void {
+  /** Resets the element to hidden state and re-observes it */
+  reset(): void {
     const element = this.el.nativeElement;
-    [...this.transitionClasses, ...this.hiddenClasses].forEach((cls) => {
-      this.renderer.addClass(element, cls);
-    });
+
+    // Disconnect any previous observer
+    this.observer?.disconnect();
+
+    // Remove visible classes, re-apply hidden + transition classes
+    this.visibleClasses.forEach((cls) => this.renderer.removeClass(element, cls));
+    [...this.transitionClasses, ...this.hiddenClasses].forEach((cls) =>
+      this.renderer.addClass(element, cls),
+    );
+
+    if (isPlatformBrowser(this.platformId)) {
+      requestAnimationFrame(() => {
+        this.setupIntersectionObserver();
+      });
+    }
   }
 
   /**
@@ -75,6 +83,12 @@ export class ScrollRevealDirective implements OnInit {
     // Remove "Hidden" classes, add "Visible" classes
     this.hiddenClasses.forEach((cls) => this.renderer.removeClass(element, cls));
     this.visibleClasses.forEach((cls) => this.renderer.addClass(element, cls));
+
+    // Clear transition-delay after reveal animation finishes (including stagger delay)
+    // to ensure subsequent hover/interactions are immediate.
+    setTimeout(() => {
+      this.renderer.setStyle(element, 'transition-delay', '');
+    }, 2000);
 
     // Efficiency: Stop watching this element once it's visible
     observer.unobserve(element);

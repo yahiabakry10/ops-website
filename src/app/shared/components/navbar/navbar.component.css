@@ -36,8 +36,13 @@ nav ul li a:hover::before {
   transform: scale(1);
 }
 
-nav ul li a.nav-active {
-  color: var(--color-brand-primary) !important;
+nav ul li a.is-active {
+  color: #fbbf24; /* Amber */
+}
+
+/* 2. Scrolled Active State (The 'Scrolled' class on the NAV parent overrides the link) */
+nav.scrolled ul li a.is-active {
+  color: var(--color-brand-primary);
 }
 
 nav ul li a.nav-active::before {
@@ -47,7 +52,7 @@ nav ul li a.nav-active::before {
 
 /* Mobile Nav Active */
 .mobile-nav-active {
-  color: var(--color-brand-primary) !important;
+  color: #fbbf24;
   background-color: rgb(46 90 172 / 0.08);
 }
 

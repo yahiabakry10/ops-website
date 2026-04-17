@@ -35,10 +35,6 @@
   .special-partners-card {
     @apply bg-linear-to-br from-blue-50 to-white dark:from-slate-800/50 dark:to-slate-900/50 border-2 border-brand-primary/20 dark:border-brand-primary/30 rounded-lg p-6 shadow-md;
   }
-
-  .premium-card {
-    @apply relative h-full overflow-hidden rounded-2xl bg-linear-to-br from-white to-gray-50 dark:from-slate-900 dark:to-slate-800 p-8 shadow-lg ring-1 ring-gray-900/5 dark:ring-white/5 transition-all duration-300 hover:shadow-2xl hover:shadow-brand-primary/10 dark:hover:shadow-brand-secondary/20 hover:-translate-y-1;
-  }
 }
 
 html,

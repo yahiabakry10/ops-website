@@ -2,12 +2,15 @@
   class="relative py-24 bg-white dark:bg-slate-950 transition-colors duration-500 overflow-hidden"
 >
   <div class="max-w-7xl mx-auto px-4 text-center mb-16 relative z-10">
-    <h2 class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight mb-12">
+    <h2
+      appScrollReveal
+      class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight mb-12"
+    >
       Our Most Important Work in
       <span class="text-brand-primary">Healthcare Technology</span>
     </h2>
 
-    <div class="flex justify-center mb-16">
+    <div class="flex justify-center mb-16" appScrollReveal>
       <div
         class="inline-flex p-1.5 bg-slate-100 dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-inner"
       >
@@ -16,7 +19,7 @@
           [class]="
             showCaseView() === 'mobile' ? 'bg-brand-primary text-white shadow-lg' : 'text-slate-500'
           "
-          class="px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300"
+          class="px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer"
         >
           Mobile Apps
         </button>
@@ -34,7 +37,7 @@
 
     @if (isReady()) {
       <div class="relative w-full">
-        <swiper-container #swiperRef init="false">
+        <swiper-container #swiperRef init="false" appScrollReveal>
           @for (img of showCaseView() === 'mobile' ? mobileImages() : webImages(); track img.src) {
             <swiper-slide
               [class.mobile-slide]="showCaseView() === 'mobile'"

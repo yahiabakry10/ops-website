@@ -24,7 +24,6 @@ swiper-slide.swiper-slide-active {
   transform: scale(1.05);
 }
 
-/* Device Wrapper & The Webstdy Blackout Overlay */
 .device-wrapper {
   position: relative;
   width: 100%;
@@ -33,7 +32,6 @@ swiper-slide.swiper-slide-active {
   overflow: hidden;
 }
 
-/* BLACKOUT OVERLAY - The "Webstdy" Look */
 .device-wrapper::before {
   content: '';
   position: absolute;

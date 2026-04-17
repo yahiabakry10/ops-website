@@ -10,6 +10,7 @@ import {
 } from '@angular/core';
 import { register } from 'swiper/element/bundle';
 import { SwiperContainer } from 'swiper/element';
+import { ScrollRevealDirective } from '../../../../shared/directives/scroll-reveal.directive';
 
 register();
 
@@ -21,7 +22,7 @@ export interface ShowcaseImage {
 @Component({
   selector: 'app-showcase',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ScrollRevealDirective],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './showcase.component.html',
   styleUrl: './showcase.component.css',
