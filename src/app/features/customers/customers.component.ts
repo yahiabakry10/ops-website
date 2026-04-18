@@ -1,11 +1,10 @@
 import { Component, computed, Signal, signal, WritableSignal } from '@angular/core';
-import { MainHeaderComponent } from '../../shared/components/main-header/main-header.component';
 import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
 import { Customers, filterType } from './models/customers.interface';
 
 @Component({
   selector: 'app-customers',
-  imports: [ScrollRevealDirective, MainHeaderComponent],
+  imports: [ScrollRevealDirective],
   templateUrl: './customers.component.html',
   styleUrl: './customers.component.css',
 })
