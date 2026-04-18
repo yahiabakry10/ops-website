@@ -1,10 +1,11 @@
 import { Component, computed, Signal, signal, WritableSignal } from '@angular/core';
 import { ScrollRevealDirective } from '../../shared/directives/scroll-reveal.directive';
 import { Customers, filterType } from './models/customers.interface';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-customers',
-  imports: [ScrollRevealDirective],
+  imports: [ScrollRevealDirective, TranslatePipe],
   templateUrl: './customers.component.html',
   styleUrl: './customers.component.css',
 })
@@ -96,6 +97,10 @@ export class CustomersComponent {
   }
 
   getFilteredLabel(filter: filterType): string {
-    return filter === 'All' ? 'All Customers' : `${filter}s`;
+    const base = 'CUSTOMERS.NETWORK.FILTERS';
+    if (filter === 'All') return `${base}.ALL`;
+    if (filter === 'Hospital') return `${base}.Hospital`;
+    if (filter === 'Medical Center') return `${base}.Medical Center`;
+    return '';
   }
 }

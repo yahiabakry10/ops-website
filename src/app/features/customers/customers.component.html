@@ -25,7 +25,7 @@
               class="size-2 rounded-full shrink-0 bg-[#7DD3FC] shadow-md shadow-[#7DD3FC]"
             ></span>
             <span class="text-[11px] font-semibold tracking-[0.12em] uppercase text-white/90">
-              Trusted Across Egypt &amp; Saudi Arabia
+              {{ 'CUSTOMERS.HERO.BADGE' | translate }}
             </span>
           </div>
 
@@ -33,17 +33,13 @@
           <h1
             class="text-5xl md:text-6xl lg:text-7xl text-white leading-[1.1] tracking-tight mb-6 font-bold"
           >
-            Our Valued
-            <span class="text-[#7DD3FC]">Customers</span>
+            {{ 'CUSTOMERS.HERO.TITLE_PART_1' | translate }}
+            <span class="text-[#7DD3FC]">{{ 'CUSTOMERS.HERO.TITLE_PART_2' | translate }}</span>
           </h1>
 
           <!-- Subheading -->
-          <p class="text-lg lg:text-xl font-light leading-relaxed text-white/85 mb-10 max-w-xl">
-            From major hospitals in Cairo and Alexandria to specialized medical centers across Egypt
-            — and beyond to
-            <span class="text-white font-medium">Saudi Arabia</span>
-            — OPS is the trusted technology partner for institutions that put
-            <span class="text-white font-medium">patient care first.</span>
+          <p class="text-lg lg:text-xl font-light leading-relaxed text-white/95 mb-10 max-w-xl">
+            {{ 'CUSTOMERS.HERO.SUBHEADING' | translate }}
           </p>
 
           <!-- Institution type chips -->
@@ -53,7 +49,9 @@
               style="background: rgba(255, 255, 255, 0.09)"
             >
               <span class="w-[5px] h-[5px] rounded-full shrink-0 bg-[#7DD3FC]"></span>
-              <span class="text-sm font-medium text-white/85">General Hospitals</span>
+              <span class="text-sm font-medium text-white/95">{{
+                'CUSTOMERS.HERO.CHIPS.HOSPITALS' | translate
+              }}</span>
             </div>
 
             <div
@@ -61,7 +59,9 @@
               style="background: rgba(255, 255, 255, 0.09)"
             >
               <span class="w-[5px] h-[5px] rounded-full shrink-0 bg-[#7DD3FC]"></span>
-              <span class="text-sm font-medium text-white/85">Medical Centers</span>
+              <span class="text-sm font-medium text-white/95">{{
+                'CUSTOMERS.HERO.CHIPS.CENTERS' | translate
+              }}</span>
             </div>
 
             <div
@@ -69,7 +69,9 @@
               style="background: rgba(255, 255, 255, 0.09)"
             >
               <span class="w-[5px] h-[5px] rounded-full shrink-0 bg-[#7DD3FC]"></span>
-              <span class="text-sm font-medium text-white/85">Polyclinics</span>
+              <span class="text-sm font-medium text-white/95">{{
+                'CUSTOMERS.HERO.CHIPS.POLYCLINICS' | translate
+              }}</span>
             </div>
           </div>
         </div>
@@ -84,45 +86,45 @@
               background: rgba(255, 255, 255, 0.07);
             "
           >
-            <img
-              src="/images/customers.jpg"
-              alt="OPS Customers"
-              class="block w-full h-auto object-cover"
-            />
+            <img src="/images/customers.jpg" alt="OPS Customers" class="block w-full h-auto" />
 
             <!-- Geo badge -->
             <div
-              class="absolute top-[14px] right-[14px] flex items-center gap-[5px] rounded-full pl-[7px] pr-[10px] py-[5px] bg-[#08143ac7] border border-white/20"
+              class="absolute top-[14px] inset-e-[14px] flex items-center gap-[5px] rounded-full pl-[7px] pr-[10px] py-[5px] bg-[#08143ac7] border border-white/20"
             >
               <span class="w-[6px] h-[6px] rounded-full shrink-0 bg-[#4ADE80]"></span>
-              <span class="text-[10.5px] font-medium text-white/82">Egypt · Saudi Arabia</span>
+              <span class="text-[10.5px] font-medium text-white/82">{{
+                'CUSTOMERS.HERO.GEO' | translate
+              }}</span>
             </div>
 
             <!-- Stats overlay -->
             <div
-              class="absolute bottom-0 left-0 right-0 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-end px-5 pt-9 pb-4 bg-linear-to-t from-[#08143ac7] to-transparent"
+              class="absolute bottom-0 inset-s-0 inset-e-0 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-end px-5 pt-9 pb-4 bg-linear-to-t from-[#08143ac7] to-transparent"
             >
               <div class="flex flex-col gap-[2px] items-center text-center">
-                <span class="font-serif text-[24px] text-white leading-none">16+</span>
-                <span class="text-[10px] text-white/52 tracking-[0.05em] mt-[2px]">Hospitals</span>
+                <span class="font-serif text-[24px] text-white leading-none">16+ </span>
+                <span class="text-[10px] text-white/52 tracking-[0.05em] mt-[2px]">{{
+                  'CUSTOMERS.STATS.HOSPITALS' | translate
+                }}</span>
               </div>
 
               <div class="w-px h-8 mb-1 self-end bg-white/18"></div>
 
               <div class="flex flex-col gap-[2px] items-center text-center">
                 <span class="font-serif text-[24px] text-white leading-none">27+</span>
-                <span class="text-[10px] text-white/52 tracking-[0.05em] mt-[2px]"
-                  >Total Institutions</span
-                >
+                <span class="text-[10px] text-white/52 tracking-[0.05em] mt-[2px]">{{
+                  'CUSTOMERS.STATS.TOTAL' | translate
+                }}</span>
               </div>
 
               <div class="w-px h-8 mb-1 self-end bg-white/18"></div>
 
               <div class="flex flex-col gap-[2px] items-center text-center">
                 <span class="font-serif text-[24px] text-white leading-none">20+</span>
-                <span class="text-[10px] text-white/52 tracking-[0.05em] mt-[2px]"
-                  >Yrs of Trust</span
-                >
+                <span class="text-[10px] text-white/52 tracking-[0.05em] mt-[2px]">{{
+                  'CUSTOMERS.STATS.TRUST' | translate
+                }}</span>
               </div>
             </div>
           </div>
@@ -139,8 +141,12 @@
               <i class="pi pi-map" style="font-size: 1.25rem"></i>
             </div>
             <div class="flex flex-col">
-              <span class="text-sm font-bold text-white tracking-wide">Cairo & Giza</span>
-              <span class="text-xs text-white/50">Capital region presence</span>
+              <span class="text-sm font-bold text-white tracking-wide">{{
+                'CUSTOMERS.REACH.CAIRO_GIZA.TITLE' | translate
+              }}</span>
+              <span class="text-xs text-white/80">{{
+                'CUSTOMERS.REACH.CAIRO_GIZA.SUB' | translate
+              }}</span>
             </div>
           </div>
 
@@ -149,8 +155,12 @@
               <i class="pi pi-compass" style="font-size: 1.25rem"></i>
             </div>
             <div class="flex flex-col">
-              <span class="text-sm font-bold text-white tracking-wide">Alexandria</span>
-              <span class="text-xs text-white/50">Largest hospital cluster</span>
+              <span class="text-sm font-bold text-white tracking-wide">{{
+                'CUSTOMERS.REACH.ALEX.TITLE' | translate
+              }}</span>
+              <span class="text-xs text-white/80">{{
+                'CUSTOMERS.REACH.ALEX.SUB' | translate
+              }}</span>
             </div>
           </div>
 
@@ -159,8 +169,12 @@
               <i class="pi pi-globe" style="font-size: 1.25rem"></i>
             </div>
             <div class="flex flex-col">
-              <span class="text-sm font-bold text-white tracking-wide">Delta & Upper Egypt</span>
-              <span class="text-xs text-white/50">Mansoura · Tanta · Minya</span>
+              <span class="text-sm font-bold text-white tracking-wide">{{
+                'CUSTOMERS.REACH.DELTA.TITLE' | translate
+              }}</span>
+              <span class="text-xs text-white/80">{{
+                'CUSTOMERS.REACH.DELTA.SUB' | translate
+              }}</span>
             </div>
           </div>
 
@@ -169,8 +183,10 @@
               <i class="pi pi-external-link" style="font-size: 1.25rem"></i>
             </div>
             <div class="flex flex-col">
-              <span class="text-sm font-bold text-white tracking-wide">Saudi Arabia</span>
-              <span class="text-xs text-white/50">Rabia Hospital · Riyadh</span>
+              <span class="text-sm font-bold text-white tracking-wide">{{
+                'CUSTOMERS.REACH.KSA.TITLE' | translate
+              }}</span>
+              <span class="text-xs text-white/80">{{ 'CUSTOMERS.REACH.KSA.SUB' | translate }}</span>
             </div>
           </div>
         </div>
@@ -184,11 +200,11 @@
       <h2
         class="text-3xl sm:text-4xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight mb-4 px-4"
       >
-        Our Healthcare
-        <span class="text-brand-primary">Network</span>
+        {{ 'CUSTOMERS.NETWORK.TITLE_PART_1' | translate }}
+        <span class="text-brand-primary">{{ 'CUSTOMERS.NETWORK.TITLE_PART_2' | translate }}</span>
       </h2>
       <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-        Trusted by hospitals and medical centers across the region
+        {{ 'CUSTOMERS.NETWORK.SUBHEADING' | translate }}
       </p>
     </div>
 
@@ -204,7 +220,7 @@
               : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700 hover:border-brand-primary dark:hover:border-brand-secondary'
           "
         >
-          {{ getFilteredLabel(filter) }}
+          {{ getFilteredLabel(filter) | translate }}
         </button>
       }
     </div>
@@ -227,20 +243,20 @@
               <span
                 class="text-xs font-semibold px-3 py-1 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-400"
               >
-                {{ customer.category }}
+                {{ `CUSTOMERS.NETWORK.FILTERS.${customer.category}` | translate }}
               </span>
             </div>
             <!-- Name -->
             <h3
               class="text-lg font-bold mb-3 bg-linear-to-br from-gray-900 to-gray-700 dark:from-slate-50 dark:to-slate-300 bg-clip-text text-transparent"
             >
-              {{ customer.name }}
+              {{ `CUSTOMERS.LIST.${customer.name}` | translate }}
             </h3>
 
             <!-- Location -->
             <div class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 mb-2">
               <i class="pi pi-map-marker text-brand-primary" style="font-size: 1rem"></i>
-              <span>{{ customer.location }}</span>
+              <span>{{ `CUSTOMERS.LIST.LOCATIONS.${customer.location}` | translate }}</span>
             </div>
           </div>
         </div>

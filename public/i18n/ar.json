@@ -47,6 +47,17 @@
     }
   },
 
+  "SHOWCASE": {
+    "TITLE_MAIN": "أبرز أعمالنا في",
+    "TITLE_SUB": "تكنولوجيا الرعاية الصحية",
+    "MOBILE_TAB": "تطبيقات الجوال",
+    "WEB_TAB": "لوحات التحكم الرقمية",
+    "IMAGES": {
+      "APP_SCREEN": "لقطة شاشة للتطبيق",
+      "DASHBOARD_SCREEN": "لقطة شاشة للوحة التحكم"
+    }
+  },
+
   "CLIENTS": {
     "TITLE": "شريك النجاح لكبرى المؤسسات الصحية",
     "SUBTITLE": "نقدم خدماتنا للمستشفيات والمراكز الطبية والمرافق الصحية في كافة أنحاء المنطقة",
@@ -73,7 +84,8 @@
     },
     "ARIA": {
       "TOGGLE_MENU": "تبديل قائمة التنقل"
-    }
+    },
+    "CONNECT": "تواصل"
   },
 
   "FOOTER": {
@@ -230,6 +242,84 @@
       "MS_SUB": "MS SQL Server, .NET, Angular",
       "ORACLE": "أوراكل",
       "ORACLE_SUB": "قاعدة بيانات Oracle 19c"
+    }
+  },
+
+  "CUSTOMERS": {
+    "HERO": {
+      "BADGE": "نحوز على ثقة المؤسسات في مصر والسعودية",
+      "TITLE_PART_1": "شركاء",
+      "TITLE_PART_2": "النجاح",
+      "SUBHEADING": "من كبرى المستشفيات في القاهرة والإسكندرية إلى المراكز الطبية المتخصصة في كافة أنحاء مصر — وصولاً إلى المملكة العربية السعودية — تعد OPS الشريك التكنولوجي الموثوق للمؤسسات التي تضع رعاية المريض على رأس أولوياتها.",
+      "CHIPS": {
+        "HOSPITALS": "مستشفيات عامة",
+        "CENTERS": "مراكز طبية",
+        "POLYCLINICS": "مجمعات عيادات"
+      },
+      "GEO": "مصر · السعودية"
+    },
+    "STATS": {
+      "HOSPITALS": "مستشفى",
+      "TOTAL": "إجمالي المؤسسات",
+      "TRUST": "عاماً من الثقة"
+    },
+    "REACH": {
+      "CAIRO_GIZA": { "TITLE": "القاهرة والجيزة", "SUB": "حضور قوي في إقليم العاصمة" },
+      "ALEX": { "TITLE": "الإسكندرية", "SUB": "أكبر تجمع للمستشفيات" },
+      "DELTA": { "TITLE": "الدلتا وصعيد مصر", "SUB": "المنصورة · طنطا · المنيا" },
+      "KSA": { "TITLE": "المملكة العربية السعودية", "SUB": "مستشفى رابية · الرياض" }
+    },
+    "NETWORK": {
+      "TITLE_PART_1": "شبكة رعاية",
+      "TITLE_PART_2": "عملائنا",
+      "SUBHEADING": "نفخر بثقة المستشفيات والمراكز الطبية الرائدة في المنطقة",
+      "FILTERS": {
+        "ALL": "جميع العملاء",
+        "Hospital": "مستشفيات",
+        "Medical Center": "مراكز طبية"
+      }
+    },
+    "LIST": {
+      "Military Production Hospital": "مستشفى الإنتاج الحربي",
+      "Rabia Hospital": "مستشفى رابية",
+      "Islamic Hospital": "المستشفى الإسلامي",
+      "Fouad Hospital": "مستشفى فؤاد",
+      "Al-Jazeera International Hospital (SALLAB)": "مستشفى الجزيرة الدولي (السلاب)",
+      "Nile Hospital": "مستشفى النيل",
+      "AlNahar Hospital": "مستشفى النهار",
+      "AlRazy Hospital": "مستشفى الرازي",
+      "Lymar Hospital (Pediatrics)": "مستشفى ليمار (للأطفال)",
+      "Tiba Hospital": "مستشفى طيبة",
+      "Dr. Ibrahim Nada Hospital": "مستشفى د. إبراهيم ندى",
+      "Badrawy Hospital": "مستشفى بدراوي",
+      "Sidi Beshr Royal Hospital": "مستشفى سيدي بشر رويال",
+      "Fargallah Charitable Hospital": "مستشفى فرج الله الخيري",
+      "Synapse Hospital (Pediatrics)": "مستشفى سينابس (للأطفال)",
+      "Saint Mary Medical Center": "مركز سانت ماري الطبي",
+      "Enaya Medical Centers": "مراكز عناية الطبية",
+      "Fouad Orthopedic Medical Center": "مركز فؤاد لجراحة العظام",
+      "El-Sewedy Medical Group": "مجموعة السويدي الطبية",
+      "Nile Specialized Clinics": "عيادات النيل التخصصية",
+      "AlTabib AlAraby Medical Center": "مركز الطبيب العربي الطبي",
+      "AlYousr Obstetrics and Gynecology Medical Center": "مركز اليسر لأمراض النساء والتوليد",
+      "Eiadty Medical Center": "مركز عيادتي الطبي",
+      "Al-Mahaba Medical Center (Dialysis)": "مركز المحبة الطبي (غسيل كلى)",
+      "Aldawa Medical Center": "مركز الدواء الطبي",
+      "Dr. Tarek Omar Clinics": "عيادات د. طارق عمر",
+      "LOCATIONS": {
+        "Cairo, Egypt": "القاهرة، مصر",
+        "Riyadh, Saudi Arabia": "الرياض، المملكة العربية السعودية",
+        "Mansoura, Egypt": "المنصورة، مصر",
+        "Minya, Egypt": "المنيا، مصر",
+        "Alexandria, Egypt": "الإسكندرية، مصر",
+        "Monoufia, Egypt": "المنوفية، مصر",
+        "Demiatta, Egypt": "دمياط، مصر",
+        "Cairo - ElKanater, Egypt": "القاهرة - القناطر، مصر",
+        "Giza - Sheik Zayed, Egypt": "الجيزة - الشيخ زايد، مصر",
+        "10th of Ramadan, Egypt": "العاشر من رمضان، مصر",
+        "Madinat Nasr, Cairo, Egypt": "مدينة نصر، القاهرة، مصر",
+        "Tanta, Egypt": "طنطا، مصر"
+      }
     }
   },
 

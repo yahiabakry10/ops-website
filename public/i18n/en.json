@@ -47,6 +47,17 @@
     }
   },
 
+  "SHOWCASE": {
+    "TITLE_MAIN": "Our Most Important Work in",
+    "TITLE_SUB": "Healthcare Technology",
+    "MOBILE_TAB": "Mobile Apps",
+    "WEB_TAB": "Web Dashboards",
+    "IMAGES": {
+      "APP_SCREEN": "Application Screenshot",
+      "DASHBOARD_SCREEN": "Dashboard Screenshot"
+    }
+  },
+
   "CLIENTS": {
     "TITLE": "Trusted by Leading Healthcare Institutions",
     "SUBTITLE": "Serving hospitals, medical centers, and healthcare facilities across the region",
@@ -73,7 +84,8 @@
     },
     "ARIA": {
       "TOGGLE_MENU": "Toggle navigation menu"
-    }
+    },
+    "CONNECT": "Connect"
   },
 
   "FOOTER": {
@@ -233,6 +245,84 @@
       "MS_SUB": "MS SQL Server, .NET, Angular",
       "ORACLE": "Oracle",
       "ORACLE_SUB": "Oracle 19c Database"
+    }
+  },
+
+  "CUSTOMERS": {
+    "HERO": {
+      "BADGE": "Trusted Across Egypt & Saudi Arabia",
+      "TITLE_PART_1": "Our Valued",
+      "TITLE_PART_2": "Customers",
+      "SUBHEADING": "From major hospitals in Cairo and Alexandria to specialized medical centers across Egypt — and beyond to Saudi Arabia — OPS is the trusted technology partner for institutions that put patient care first.",
+      "CHIPS": {
+        "HOSPITALS": "General Hospitals",
+        "CENTERS": "Medical Centers",
+        "POLYCLINICS": "Polyclinics"
+      },
+      "GEO": "Egypt · Saudi Arabia"
+    },
+    "STATS": {
+      "HOSPITALS": "Hospitals",
+      "TOTAL": "Total Institutions",
+      "TRUST": "Yrs of Trust"
+    },
+    "REACH": {
+      "CAIRO_GIZA": { "TITLE": "Cairo & Giza", "SUB": "Capital region presence" },
+      "ALEX": { "TITLE": "Alexandria", "SUB": "Largest hospital cluster" },
+      "DELTA": { "TITLE": "Delta & Upper Egypt", "SUB": "Mansoura · Tanta · Minya" },
+      "KSA": { "TITLE": "Saudi Arabia", "SUB": "Rabia Hospital · Riyadh" }
+    },
+    "NETWORK": {
+      "TITLE_PART_1": "Our Healthcare",
+      "TITLE_PART_2": "Network",
+      "SUBHEADING": "Trusted by hospitals and medical centers across the region",
+      "FILTERS": {
+        "ALL": "All Customers",
+        "Hospital": "Hospitals",
+        "Medical Center": "Medical Centers"
+      }
+    },
+    "LIST": {
+      "Military Production Hospital": "Military Production Hospital",
+      "Rabia Hospital": "Rabia Hospital",
+      "Islamic Hospital": "Islamic Hospital",
+      "Fouad Hospital": "Fouad Hospital",
+      "Al-Jazeera International Hospital (SALLAB)": "Al-Jazeera International Hospital (SALLAB)",
+      "Nile Hospital": "Nile Hospital",
+      "AlNahar Hospital": "AlNahar Hospital",
+      "AlRazy Hospital": "AlRazy Hospital",
+      "Lymar Hospital (Pediatrics)": "Lymar Hospital (Pediatrics)",
+      "Tiba Hospital": "Tiba Hospital",
+      "Dr. Ibrahim Nada Hospital": "Dr. Ibrahim Nada Hospital",
+      "Badrawy Hospital": "Badrawy Hospital",
+      "Sidi Beshr Royal Hospital": "Sidi Beshr Royal Hospital",
+      "Fargallah Charitable Hospital": "Fargallah Charitable Hospital",
+      "Synapse Hospital (Pediatrics)": "Synapse Hospital (Pediatrics)",
+      "Saint Mary Medical Center": "Saint Mary Medical Center",
+      "Enaya Medical Centers": "Enaya Medical Centers",
+      "Fouad Orthopedic Medical Center": "Fouad Orthopedic Medical Center",
+      "El-Sewedy Medical Group": "El-Sewedy Medical Group",
+      "Nile Specialized Clinics": "Nile Specialized Clinics",
+      "AlTabib AlAraby Medical Center": "AlTabib AlAraby Medical Center",
+      "AlYousr Obstetrics and Gynecology Medical Center": "AlYousr Obstetrics and Gynecology Medical Center",
+      "Eiadty Medical Center": "Eiadty Medical Center",
+      "Al-Mahaba Medical Center (Dialysis)": "Al-Mahaba Medical Center (Dialysis)",
+      "Aldawa Medical Center": "Aldawa Medical Center",
+      "Dr. Tarek Omar Clinics": "Dr. Tarek Omar Clinics",
+      "LOCATIONS": {
+        "Cairo, Egypt": "Cairo, Egypt",
+        "Riyadh, Saudi Arabia": "Riyadh, Saudi Arabia",
+        "Mansoura, Egypt": "Mansoura, Egypt",
+        "Minya, Egypt": "Minya, Egypt",
+        "Alexandria, Egypt": "Alexandria, Egypt",
+        "Monoufia, Egypt": "Monoufia, Egypt",
+        "Demiatta, Egypt": "Demiatta, Egypt",
+        "Cairo - ElKanater, Egypt": "Cairo - ElKanater, Egypt",
+        "Giza - Sheik Zayed, Egypt": "Giza - Sheik Zayed, Egypt",
+        "10th of Ramadan, Egypt": "10th of Ramadan, Egypt",
+        "Madinat Nasr, Cairo, Egypt": "Madinat Nasr, Cairo, Egypt",
+        "Tanta, Egypt": "Tanta, Egypt"
+      }
     }
   },
 

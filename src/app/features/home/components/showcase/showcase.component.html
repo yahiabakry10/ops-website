@@ -6,8 +6,8 @@
       appScrollReveal
       class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white tracking-tight mb-12"
     >
-      Our Most Important Work in
-      <span class="text-brand-primary">Healthcare Technology</span>
+      {{ 'SHOWCASE.TITLE_MAIN' | translate }}
+      <span class="text-brand-primary">{{ 'SHOWCASE.TITLE_SUB' | translate }}</span>
     </h2>
 
     <div class="flex justify-center mb-16" appScrollReveal>
@@ -21,7 +21,7 @@
           "
           class="px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300 cursor-pointer"
         >
-          Mobile Apps
+          {{ 'SHOWCASE.MOBILE_TAB' | translate }}
         </button>
         <button
           (click)="toggleView('web')"
@@ -30,7 +30,7 @@
           "
           class="px-8 py-3 rounded-xl font-bold text-sm transition-all duration-300"
         >
-          Web Dashboards
+          {{ 'SHOWCASE.WEB_TAB' | translate }}
         </button>
       </div>
     </div>
@@ -72,8 +72,12 @@
           }
         </swiper-container>
 
-        <button class="custom-nav-btn prev-btn"><i class="pi pi-chevron-left text-xl"></i></button>
-        <button class="custom-nav-btn next-btn"><i class="pi pi-chevron-right text-xl"></i></button>
+        <button class="custom-nav-btn prev-btn">
+          <i class="pi pi-chevron-left"></i>
+        </button>
+        <button class="custom-nav-btn next-btn">
+          <i class="pi pi-chevron-right"></i>
+        </button>
       </div>
     }
   </div>

@@ -7,10 +7,14 @@ import {
   viewChild,
   afterNextRender,
   effect,
+  inject,
+  DestroyRef,
 } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { register } from 'swiper/element/bundle';
 import { SwiperContainer } from 'swiper/element';
 import { ScrollRevealDirective } from '../../../../shared/directives/scroll-reveal.directive';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 
 register();
 
@@ -22,18 +26,22 @@ export interface ShowcaseImage {
 @Component({
   selector: 'app-showcase',
   standalone: true,
-  imports: [CommonModule, ScrollRevealDirective],
+  imports: [CommonModule, ScrollRevealDirective, TranslatePipe],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './showcase.component.html',
   styleUrl: './showcase.component.css',
 })
 export class ShowcaseComponent {
+  private readonly translateService = inject(TranslateService);
+  private readonly destroyRef = inject(DestroyRef);
+
   swiperRef = viewChild<ElementRef<SwiperContainer>>('swiperRef');
 
   readonly showCaseView = signal<'mobile' | 'web'>('mobile');
   readonly isReady = signal(false);
 
-  // MUST be signals for the template to call them as functions ()
+  private isInitialized = false;
+
   readonly mobileImages = signal<ShowcaseImage[]>([
     { src: '/images/Appointments.png', alt: 'App Screen 1' },
     { src: '/images/ClinicsDoctors.png', alt: 'App Screen 2' },
@@ -73,14 +81,16 @@ export class ShowcaseComponent {
         this.initSwiper();
       }
     });
+
+    this.translateService.onLangChange
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe(() => this.handleLangChange());
   }
 
-  private initSwiper() {
-    const swiperEl = this.swiperRef()?.nativeElement;
-    if (!swiperEl) return;
-
+  private buildSwiperParams() {
     const isMobile = window.innerWidth < 768;
-    const params = {
+
+    return {
       effect: 'coverflow',
       centeredSlides: true,
       slidesPerView: 'auto',
@@ -93,39 +103,54 @@ export class ShowcaseComponent {
       },
       coverflowEffect: {
         rotate: 0,
-        stretch: isMobile ? 40 : 120, // Adjust this for overlap
+        stretch: isMobile ? 40 : 120,
         depth: isMobile ? 100 : 150,
         modifier: 1,
         slideShadows: false,
       },
       navigation: { prevEl: '.prev-btn', nextEl: '.next-btn' },
       breakpoints: {
-        320: {
-          coverflowEffect: { stretch: 20, depth: 50 },
-        },
-        768: {
-          coverflowEffect: { stretch: 80, depth: 100 },
-        },
-        1024: {
-          coverflowEffect: { stretch: 120, depth: 150 },
-        },
+        320: { coverflowEffect: { stretch: 20, depth: 50 } },
+        768: { coverflowEffect: { stretch: 80, depth: 100 } },
+        1024: { coverflowEffect: { stretch: 120, depth: 150 } },
       },
     };
-
-    Object.assign(swiperEl, params);
-    swiperEl.initialize();
   }
 
-  toggleView(type: 'mobile' | 'web') {
+  private initSwiper(): void {
+    const swiperEl = this.swiperRef()?.nativeElement;
+    if (!swiperEl || this.isInitialized) return;
+
+    Object.assign(swiperEl, this.buildSwiperParams());
+    swiperEl.initialize();
+    this.isInitialized = true;
+  }
+
+  private destroySwiper(): void {
+    const swiper = this.swiperRef()?.nativeElement?.swiper;
+    if (swiper) {
+      swiper.destroy(true, true);
+    }
+    this.isInitialized = false;
+  }
+
+  private handleLangChange(): void {
+    // LanguageComponent sets `dir` inside requestAnimationFrame.
+    // setTimeout(0) is a macrotask — it runs after rAF has committed
+    // the dir attribute to the DOM, so Swiper reads the correct direction.
+    setTimeout(() => {
+      this.destroySwiper();
+      this.initSwiper();
+    }, 0);
+  }
+
+  toggleView(type: 'mobile' | 'web'): void {
     if (this.showCaseView() === type) return;
     this.showCaseView.set(type);
 
     setTimeout(() => {
-      const swiper = this.swiperRef()?.nativeElement?.swiper;
-      if (swiper) {
-        swiper.destroy(true, true);
-        this.initSwiper();
-      }
+      this.destroySwiper();
+      this.initSwiper();
     }, 50);
   }
 }

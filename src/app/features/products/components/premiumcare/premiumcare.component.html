@@ -194,7 +194,7 @@
               (click)="togglePanel(item.id)"
               [attr.aria-expanded]="isOpen(item.id)"
               [attr.aria-controls]="item.id + '-content'"
-              class="w-full flex items-center justify-between bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors p-4 font-semibold text-lg text-slate-800 dark:text-white text-left"
+              class="w-full flex items-center justify-between bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 transition-colors p-4 font-semibold text-lg text-slate-800 dark:text-white text-start"
             >
               <span>{{ item.header | translate }}</span>
               <i
