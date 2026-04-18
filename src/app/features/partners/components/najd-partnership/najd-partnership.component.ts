@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { Component } from '@angular/core';
+import { TranslatePipe } from '@ngx-translate/core';
 
 interface PartnershipHighlight {
   icon: string;
@@ -11,7 +11,7 @@ interface PartnershipHighlight {
 @Component({
   selector: 'app-najd-partnership',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [CommonModule, TranslatePipe],
   templateUrl: './najd-partnership.component.html',
   styleUrl: './najd-partnership.component.css',
 })
@@ -35,6 +35,4 @@ export class NajdPartnershipComponent {
   ];
 
   readonly lightRays = Array.from({ length: 5 }, (_, i) => i);
-
-  constructor(public translate: TranslateService) {}
 }
